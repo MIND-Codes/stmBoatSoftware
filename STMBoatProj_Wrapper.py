@@ -1,6 +1,8 @@
 import sys
 
 import SensorSoftware
+import PumpActivationSoftware
+from time import sleep
 
 class bcolors:
     HEADER = '\033[95m'
@@ -15,22 +17,30 @@ class bcolors:
 
 print(f"{bcolors.OKCYAN}STMBoatProh succesfully loaded")
 active = True
+round = 0
 while active:
     print(f"{bcolors.OKBLUE}Connect devices -> '0' || 'connect'")
     print(f"{bcolors.OKBLUE}Measure data    -> '1' || 'measure'")
     print(f"{bcolors.OKBLUE}Upload file     -> '2' || 'upload'")
-    print(f"{bcolors.OKBLUE}Exit code       -> '3' || 'exit'")
+    print(f"{bcolors.OKBLUE}Activate pumps  -> '3' || 'pump'")
+    print(f"{bcolors.OKBLUE}Exit code       -> '4' || 'exit'")
 
     actionInput = input(f'{bcolors.ENDC}Enter action from above: ')
     actionInput.lower()
 
     if actionInput == '0' or actionInput == 'connect':
         SensorSoftware.connect()
+        PumpActivationSoftware.pump_setup()
     elif actionInput == '1' or actionInput == 'measure':
         SensorSoftware.measure()
     elif actionInput == '2' or actionInput == 'upload':
         SensorSoftware.upload()
-    elif actionInput == '3' or actionInput == 'exit':
+    elif actionInput == '3' or actionInput == 'pump':
+        PumpActivationSoftware.pump()
+        print(f"Activated pump {round}!")
+        round += 1
+        print(f"Next input '3' will activate pump {round}")
+    elif actionInput == '4' or actionInput == 'exit':
         SensorSoftware.exit()
         sys.exit()
         print(f"{bcolors.ENDC}")
