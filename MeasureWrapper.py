@@ -1,6 +1,6 @@
 import sys
 
-import SensorSoftware
+import Sensors
 from time import sleep
 
 class bcolors:

@@ -6,7 +6,7 @@ from pasco import PASCOBLEDevice
 from datetime import datetime
 import csv
 import pytz
-from FTPUploadSoftware import saveValue
+from FTPUpload import saveValue
 from time import sleep
 
 class bcolors:

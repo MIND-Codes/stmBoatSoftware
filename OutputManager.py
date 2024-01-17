@@ -1,4 +1,4 @@
-from transformation_curves import main
+from Calculations import main
 import csv
 from paramiko import *
 
@@ -70,3 +70,5 @@ def output_list():
         out = out.replace(".csv", "")
         print(out)
     i += 1
+
+output_list()

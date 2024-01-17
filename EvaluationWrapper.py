@@ -1,4 +1,4 @@
-import OutputManagerSoftware
+import OutputManager
 import sys
 import subprocess
 
@@ -14,32 +14,17 @@ for module in required:
         print(f"Error with library {module}")
         print(error)
 
+out = OutputManagerSoftware
 active = True
 while active:
-    print(f"")
-    print(f"")
+    print("These are the five most recent files:")
+    print(out.output_list())
+    print(f"List five more files    -> '0'")
+    print(f"Evaluate file           -> '[Date]'")
 
     actionInput = input(f'Enter action from above: ')
     actionInput.lower()
 
-    if actionInput == '0' or actionInput == 'connect':
-        SensorSoftware.connect()
-    elif actionInput == '1' or actionInput == 'measure':
-        SensorSoftware.measure()
-    elif actionInput == '2' or actionInput == 'upload':
-        SensorSoftware.upload()
-    #elif actionInput == '3' or actionInput == 'pump':
-    #if round < 4:
-    #    PumpActivationSoftware.pump(round)
-    #    print(f"Activated pump {round}!")
-    #    round += 1
-    #    print(f"Next input '3' will activate pump {round}")
-    #else:
-    #    print("All pumps have already been used!")
-    elif actionInput == '4' or actionInput == 'exit':
-        SensorSoftware.exit()
-        sys.exit()
-        print(f"{bcolors.ENDC}")
-    else:
-        print(f"{bcolors.FAIL}No valid Input. Please try again")
+    if actionInput == '0':
+        out.output_list()
 
