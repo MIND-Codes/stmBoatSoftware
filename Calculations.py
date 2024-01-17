@@ -1,6 +1,6 @@
 import numpy as np
 from list import table, oxygen_list
-#hallo
+
 weight = [0.08, 0.20, 0.10, 0.10, 0.15, 0.07, 0.10, 0.20]
 
 list = ["Temperatur", "Sauerstoff", "pH", "Nitrat", "Ammonium", "Leitfähigkeit", "Phosphat", "BSB5"]
