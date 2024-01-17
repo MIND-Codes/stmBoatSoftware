@@ -15,7 +15,7 @@ for module in required:
         print(error)
 
 print("These are the five most recent files:")
-print(out.output_list())
+out.output_list()
 
 active = True
 while active:

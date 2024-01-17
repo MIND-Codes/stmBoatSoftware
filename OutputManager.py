@@ -1,27 +1,31 @@
+# Author -  Luis Gerloni | MINDCode
+# Email:    gerloni-luis@outlook.com
+
 from Calculations import main
 import csv
 from paramiko import *
 import FTPDownload as download
 from time import sleep
 
+# FTP-Client Setup
 client = SSHClient()
 client.load_host_keys(r'C:\Users\luisg\.ssh\known_hosts')
 client.load_system_host_keys()
 client.set_missing_host_key_policy(AutoAddPolicy())
 
+# Verbindungsaufbau zum FTP-Server, sowie der Wechsel des Verzeichnisses
 client.connect('192.168.169.61', username='mint', password='mintstm')
 ftp = client.open_sftp()
 ftp.chdir('values')
 
+# Übertragung der Namen aller Dateien innerhalb des Verzeichnis in eine Liste, welche nach Namen sortiert wird
 l = []
 for n in ftp.listdir():
     lstatout = str(ftp.lstat(n)).split()[0]
     if 'd' not in lstatout: l.append(n)
 l.sort(reverse=True)
 
-i = 0
-
-
+# Methode zur Datenverarbeitung
 def process(fileName):
     a_values = [[], [], [], [], [], []]
     download.getValue(fileName)
@@ -49,6 +53,7 @@ def process(fileName):
     print("--------------------Gewässergüteklasse--------------------")
 
     p = input("Phosphat: ")
+    p = 0.002*p^2-0.008*p+0.3239
     b = input("BSB5: ")
 
     if len(p) != 0 and len(b) != 0:
@@ -64,7 +69,7 @@ def process(fileName):
         print("Gewässergüteklasse: " + str(ci))
         print(quality_class)
 
-
+i = 0
 def output_list():
     global i
     for n in l[(5 * i):(5 * (i + 1))]:
