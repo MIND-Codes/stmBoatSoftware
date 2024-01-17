@@ -1,4 +1,4 @@
-import OutputManager
+import OutputManager as out
 import sys
 import subprocess
 
@@ -14,11 +14,11 @@ for module in required:
         print(f"Error with library {module}")
         print(error)
 
-out = OutputManagerSoftware
+print("These are the five most recent files:")
+print(out.output_list())
+
 active = True
 while active:
-    print("These are the five most recent files:")
-    print(out.output_list())
     print(f"List five more files    -> '0'")
     print(f"Evaluate file           -> '[Date]'")
 
@@ -27,4 +27,11 @@ while active:
 
     if actionInput == '0':
         out.output_list()
-
+    else:
+        try:
+            out.process(actionInput)
+            exit()
+        except Exception as error:
+            print(f"Error occured while trying to finde file!")
+            print(f"Check if input was correct")
+            print(f"Error: {error}")

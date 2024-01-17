@@ -15,6 +15,8 @@ ftp.chdir('values')
 print(ftp.getcwd())
 cwd = os.getcwd()
 
+ftp.remove('test.txt')
+
 for i in ftp.listdir():
     lstatout=str(ftp.lstat(i)).split()[0]
     if 'd' in lstatout: print(i, 'is a directory')
@@ -22,6 +24,8 @@ for i in ftp.listdir():
 for i in ftp.listdir():
     lstatout=str(ftp.lstat(i)).split()[0]
     if 'd' not in lstatout: print(i, 'is a file')
+
+
 
 def getValue(fileName):
     try:

@@ -1,6 +1,8 @@
 from Calculations import main
 import csv
 from paramiko import *
+import FTPDownload as download
+from time import sleep
 
 client = SSHClient()
 client.load_host_keys(r'C:\Users\luisg\.ssh\known_hosts')
@@ -19,10 +21,12 @@ l.sort(reverse=True)
 
 i = 0
 
+
 def process(fileName):
     a_values = [[], [], [], [], [], []]
-    fileName = f"Values {fileName}.csv"
-    with open(fileName, "r") as csvfile:
+    download.getValue(fileName)
+    sleep(1)
+    with open(f"Values {fileName}.csv", "r") as csvfile:
         csv_file_reader = csv.reader(csvfile, delimiter=",")
         for i, row in enumerate(csv_file_reader):
             if i >= 1:
@@ -39,8 +43,6 @@ def process(fileName):
         for value in i:
             a += float(value)
         values.append(a / len(i))
-
-    print(values)
 
     list = ["Temperatur", "Sauerstoff", "pH", "Nitrat", "Ammonium", "Leitfähigkeit", "Phosphat", "BSB5"]
 
@@ -68,7 +70,5 @@ def output_list():
     for n in l[(5 * i):(5 * (i + 1))]:
         out = n.replace("Values ", "")
         out = out.replace(".csv", "")
-        print(out)
+        print(1, out)
     i += 1
-
-output_list()

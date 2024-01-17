@@ -22,5 +22,3 @@ def getValue(fileName):
     except Exception as error:
         print(f"Error occurred: ", type(error).__name__)
         print(f"Check if date is entered like this: 'Year-Month-Day.Hour-Minute'")
-
-getValue(" ")
