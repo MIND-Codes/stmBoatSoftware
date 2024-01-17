@@ -11,8 +11,17 @@ client.set_missing_host_key_policy(AutoAddPolicy())
 
 client.connect('192.168.169.61', username='mint', password='mintstm')
 ftp = client.open_sftp()
-
+ftp.chdir('values')
+print(ftp.getcwd())
 cwd = os.getcwd()
+
+for i in ftp.listdir():
+    lstatout=str(ftp.lstat(i)).split()[0]
+    if 'd' in lstatout: print(i, 'is a directory')
+
+for i in ftp.listdir():
+    lstatout=str(ftp.lstat(i)).split()[0]
+    if 'd' not in lstatout: print(i, 'is a file')
 
 def getValue(fileName):
     try:
@@ -22,3 +31,5 @@ def getValue(fileName):
     except Exception as error:
         print(f"Error occurred: ", type(error).__name__)
         print(f"Check if date is entered like this: 'Year-Month-Day.Hour-Minute'")
+
+getValue('2023-12-20.16-57')
