@@ -1,7 +1,6 @@
 import sys
 
 import SensorSoftware
-import PumpActivationSoftware
 from time import sleep
 
 class bcolors:
@@ -30,16 +29,18 @@ while active:
 
     if actionInput == '0' or actionInput == 'connect':
         SensorSoftware.connect()
-        PumpActivationSoftware.pump_setup()
     elif actionInput == '1' or actionInput == 'measure':
         SensorSoftware.measure()
     elif actionInput == '2' or actionInput == 'upload':
         SensorSoftware.upload()
-    elif actionInput == '3' or actionInput == 'pump':
-        PumpActivationSoftware.pump()
-        print(f"Activated pump {round}!")
-        round += 1
-        print(f"Next input '3' will activate pump {round}")
+    #elif actionInput == '3' or actionInput == 'pump':
+    #if round < 4:
+    #    PumpActivationSoftware.pump(round)
+    #    print(f"Activated pump {round}!")
+    #    round += 1
+    #    print(f"Next input '3' will activate pump {round}")
+    #else:
+    #    print("All pumps have already been used!")
     elif actionInput == '4' or actionInput == 'exit':
         SensorSoftware.exit()
         sys.exit()

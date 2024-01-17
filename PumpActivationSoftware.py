@@ -17,3 +17,4 @@ def pump(round):
 	GPIO.output(pins[round], GPIO.LOW)
 	sleep(30)
 	GPIO.output(pins[round], GPIO.HIGH)
+

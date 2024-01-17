@@ -7,6 +7,7 @@ from datetime import datetime
 import csv
 import pytz
 from FTPUploadSoftware import saveValue
+from time import sleep
 
 class bcolors:
     HEADER = '\033[95m'
@@ -24,7 +25,7 @@ class bcolors:
 s_O2, s_pH, s_nitrate, s_ammonium, s_conductivity = PASCOBLEDevice(), PASCOBLEDevice(), PASCOBLEDevice(), \
                                                     PASCOBLEDevice(), PASCOBLEDevice()
 v_temp, v_O2, v_pH, v_nitrate, v_ammonium, v_conductivity = [], [], [], [], [], []
-v_info = ["Uhrzeit", "Temperatur", "Sauerstoff", "pH-Wert", "Nitrat", "Phosphat", "Ammoniak", "Leitfaehigkeit"]
+v_info = ["Uhrzeit", "Temperatur", "Sauerstoff", "pH-Wert", "Nitrat", "Phosphat", "Ammonium", "Leitfaehigkeit"]
 time = []
 germanTZ = pytz.timezone("Europe/Berlin")
 germanTime = datetime.now(germanTZ)
@@ -33,11 +34,17 @@ date = germanTime.strftime(("%Y-%m-%d.%H-%M-%S")[:-3])
 
 def connect():
     try:
+        print(1)
         #s_O2.connect_by_id("402-771")
+        print(2)
         #s_pH.connect_by_id("246-232")
-        #s_nitrate.connect_by_id("557-561")
-        #s_ammonium.connect_by_id("551-660")
-        s_conductivity.connect_by_id("926-046")
+        print(3)
+        s_nitrate.connect_by_id("551-660")
+        print(4)
+        s_ammonium.connect_by_id("698-399")
+        print(5)
+        #s_conductivity.connect_by_id("600-282")
+        print(6)
 
         print(f"{bcolors.OKGREEN}All sensors connected successfully!")
     except Exception as error:
@@ -50,7 +57,7 @@ def connect():
             s_O2.disconnect()
             s_pH.disconnect()
             s_nitrate.disconnect()
-            s_ammonium.disconnect()
+            #s_ammonium.disconnect()
             s_conductivity.disconnect()
 
             sys.exit()
@@ -58,13 +65,21 @@ def connect():
 def measure():
     try:
         for n in range(10):
-            v_temp.append(f'{s_conductivity.read_data("Temperature")}{s_conductivity.get_measurement_unit("Temperature")}')
-        #    v_O2.append(f'{s_O2.read_data("DO2Concentration")}{s_O2.get_measurment_unit("DO2Concentration")}')
-        #    v_pH.append(f'{s_pH.read_data("pH")}{s_pH.get_measurement_unit("pH")}')
-        #    v_nitrate.append(f'{s_nitrate.read_data("ISENitrate")}{s_nitrate.get_measurement_unit("ISENitrate")}')
-        #    v_ammonium.append(f'{s_ammonium.read_data("ISEAmmonium")}{s_ammonium.get_measurement_unit("ISEAmmonium")}')
-        #    v_conductivity.append(f'{s_conductivity.read_data("Conductivity")}{s_conductivity.get_measurement_unit("Conductivity")}')
+            print(1)
+            v_temp.append(f'{s_conductivity.read_data("Temperature")}')
+            print(2)
+            v_O2.append(f'{s_O2.read_data("DO2Concentration")}')
+            print(3)
+            v_pH.append(f'{s_pH.read_data("pH")}')
+            print(4)
+            v_nitrate.append(f'{s_nitrate.read_data("ISENitrate")}')
+            print(5)
+            #v_ammonium.append(f'{s_ammonium.read_data("ISEAmmonium")}{s_ammonium.get_measurement_unit("ISEAmmonium")}')
+            v_conductivity.append(f'{s_conductivity.read_data("Conductivity")}')
+            print(6)
             time.append(germanTime.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3])
+            print(7)
+            sleep(0.5)
 
         with open(f'Values {date}.csv', 'w', newline='') as new_file:
             csv_writer = csv.writer(new_file)
@@ -73,7 +88,7 @@ def measure():
             for n in range(10):
                 # !!! FOLGENDES ANHÄNGEN, WENN ALLE SENSOREN VORHANDEN: '[time[n], v_temp[n], v_O2[n], v_pH[n], v_nitrate[n],
                 #                                     v_ammonium[n], v_conductivity[n]]' !!!
-                csv_writer.writerow([time[n], v_temp[n]])
+                csv_writer.writerow([time[n], v_temp[n], v_O2[n], v_pH[n], v_nitrate[n], v_conductivity[n]])
         print(f'{bcolors.OKGREEN}File saved as "{date}"')
 
     except Exception as error:
