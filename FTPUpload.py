@@ -1,19 +1,18 @@
-# Author -  Luis Gerloni | MINDCode
-# Email:    gerloni-luis@outlook.com
+# Author    -   Luis Gerloni    |   MIND-Codes
+# Author    -   Clara Steiner   |   MIND-Codes
+# Email:    -   gerloni-luis@outlook.com
+# Github:   -   https://github.com/MIND-Codes
 
 from paramiko import *
 import os
 
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
+class c:
+    INCIDENTAL = '\33[90m'
+    ERROR = '\33[31m'
+    SUCCESS = '\33[32m'
+    WARNING = '\33[33m'
+    HIGHLIGHT = '\33[34m'
     ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 client = SSHClient()
 client.load_host_keys(r'C:\Users\luisg\.ssh\known_hosts')
@@ -32,5 +31,5 @@ def saveValue(fileName):
 
         os.remove(fr'{cwd}\Values {fileName}.csv')
     except Exception as error:
-        print(f"{bcolors.FAIL}Error occurred: ", type(error).__name__)
-        print(f"{bcolors.WARNING}Check if date is entered like this: 'Year-Month-Day.Hour-Minute'")
+        print(f"{c.ERROR}Error occurred: ", type(error).__name__)
+        print(f"{c.WARNING}Check if date is entered like this: 'Year-Month-Day.Hour-Minute'")

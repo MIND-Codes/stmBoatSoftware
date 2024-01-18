@@ -1,11 +1,22 @@
-# Author -  Luis Gerloni | MINDCode
-# Email:    gerloni-luis@outlook.com
+# Author    -   Luis Gerloni    |   MIND-Codes
+# Author    -   Clara Steiner   |   MIND-Codes
+# Email:    -   gerloni-luis@outlook.com
+# Github:   -   https://github.com/MIND-Codes
 
 from Calculations import main
 import csv
 from paramiko import *
 import FTPDownload as download
 from time import sleep
+import math
+
+class c:
+    INCIDENTAL = '\33[90m'
+    ERROR = '\33[31m'
+    SUCCESS = '\33[32m'
+    WARNING = '\33[33m'
+    HIGHLIGHT = '\33[34m'
+    ENDC = '\033[0m'
 
 # FTP-Client Setup
 client = SSHClient()
@@ -25,6 +36,7 @@ for n in ftp.listdir():
     if 'd' not in lstatout: l.append(n)
 l.sort(reverse=True)
 
+
 # Methode zur Datenverarbeitung
 def process(fileName):
     a_values = [[], [], [], [], [], []]
@@ -34,12 +46,12 @@ def process(fileName):
         csv_file_reader = csv.reader(csvfile, delimiter=",")
         for i, row in enumerate(csv_file_reader):
             if i >= 1:
-                a_values[0].append(row[0].split(":")[1])
-                a_values[1].append(row[1])
-                a_values[2].append(row[2])
-                a_values[3].append(row[3])
-                a_values[4].append(row[4])
-                a_values[5].append(row[5])
+                a_values[0].append(row[1])
+                a_values[1].append(row[2])
+                a_values[2].append(row[3])
+                a_values[3].append(row[4])
+                a_values[4].append(row[5])
+                a_values[5].append(row[6])
 
     values = []
     for i in a_values:
@@ -50,26 +62,29 @@ def process(fileName):
 
     list = ["Temperatur", "Sauerstoff", "pH", "Nitrat", "Ammonium", "Leitfähigkeit", "Phosphat", "BSB5"]
 
-    print("--------------------Gewässergüteklasse--------------------")
+    print(f"{c.HIGHLIGHT}--------------------Gewässergüteklasse--------------------")
 
-    p = input("Phosphat: ")
-    p = 0.002*p^2-0.008*p+0.3239
-    b = input("BSB5: ")
+    values[3] = 22.477 * math.log(values[3]) - 35.65
+    values[4] = 26.012 * math.log(values[4]) - 59.874
+    p = float(input(f"{c.WARNING}Phosphat: "))
+    p = 0.002 * p ** 2 - 0.008 * p + 0.3239
+    b = input(f"{c.WARNING}BSB5: ")
 
-    if len(p) != 0 and len(b) != 0:
+    values.append(float(p))
+    values.append(float(b))
+    index, ci, quality_class = main(values)
 
-        values.append(float(p))
-        values.append(float(b))
-        index, ci, quality_class = main(values)
+    for i in range(8):
+        print(list[i] + ": ")
+        print(str(index[i]), "⬛" * (int(index[i]) // 10) + "⬜" * (10 - (int(index[i]) // 10)))
 
-        for i in range(8):
-            print(list[i] + ": ")
-            print(str(index[i]), "⬛" * (int(index[i]) // 10) + "⬜" * (10 - (int(index[i]) // 10)))
+    print("Gewässergüteklasse: " + str(ci))
+    print(quality_class)
 
-        print("Gewässergüteklasse: " + str(ci))
-        print(quality_class)
 
 i = 0
+
+
 def output_list():
     global i
     for n in l[(5 * i):(5 * (i + 1))]:
