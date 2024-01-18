@@ -1,8 +1,3 @@
-# Author    -   Luis Gerloni    |   MIND-Codes
-# Author    -   Clara Steiner   |   MIND-Codes
-# Email:    -   gerloni-luis@outlook.com
-# Github:   -   https://github.com/MIND-Codes
-
 import numpy as np
 from list import table, oxygen_list
 
