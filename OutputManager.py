@@ -10,6 +10,7 @@ import FTPDownload as download
 from time import sleep
 import math
 
+
 class c:
     INCIDENTAL = '\33[90m'
     ERROR = '\33[31m'
@@ -17,6 +18,7 @@ class c:
     WARNING = '\33[33m'
     HIGHLIGHT = '\33[34m'
     ENDC = '\033[0m'
+
 
 # FTP-Client Setup
 client = SSHClient()

@@ -7,6 +7,7 @@ import OutputManager as out
 import sys
 import subprocess
 
+
 class c:
     INCIDENTAL = '\33[90m'
     ERROR = '\33[31m'
@@ -14,6 +15,7 @@ class c:
     WARNING = '\33[33m'
     HIGHLIGHT = '\33[34m'
     ENDC = '\033[0m'
+
 
 required = {'csv', 'numpy', 'paramiko'}
 for module in required:

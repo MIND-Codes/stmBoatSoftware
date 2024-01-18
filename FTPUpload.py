@@ -6,6 +6,7 @@
 from paramiko import *
 import os
 
+
 class c:
     INCIDENTAL = '\33[90m'
     ERROR = '\33[31m'
@@ -13,6 +14,7 @@ class c:
     WARNING = '\33[33m'
     HIGHLIGHT = '\33[34m'
     ENDC = '\033[0m'
+
 
 client = SSHClient()
 client.load_host_keys(r'C:\Users\luisg\.ssh\known_hosts')
@@ -23,6 +25,7 @@ client.connect('192.168.169.61', username='mint', password='mintstm')
 ftp = client.open_sftp()
 
 cwd = os.getcwd()
+
 
 def saveValue(fileName):
     try:

@@ -6,6 +6,7 @@
 import sys
 import Sensors
 
+
 class c:
     INCIDENTAL = '\33[90m'
     ERROR = '\33[31m'
@@ -13,6 +14,7 @@ class c:
     WARNING = '\33[33m'
     HIGHLIGHT = '\33[34m'
     ENDC = '\033[0m'
+
 
 print(f"{c.INCIDENTAL}STMBoatProh succesfully loaded")
 active = True
