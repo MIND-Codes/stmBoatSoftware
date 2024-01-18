@@ -3,10 +3,12 @@
 # Email:    -   gerloni-luis@outlook.com
 # Github:   -   https://github.com/MIND-Codes
 
+# Imports
 import sys
 import Sensors
 
 
+# Class for colored outputs
 class c:
     INCIDENTAL = '\33[90m'
     ERROR = '\33[31m'
@@ -19,7 +21,10 @@ class c:
 print(f"{c.INCIDENTAL}STMBoatProh succesfully loaded")
 active = True
 round = 0
+
+# Main loop
 while active:
+    # Available commands
     print(f"{c.HIGHLIGHT}Connect devices -> '0' || 'connect'")
     print(f"{c.HIGHLIGHT}Measure data    -> '1' || 'measure'")
     print(f"{c.HIGHLIGHT}Upload file     -> '2' || 'upload'")
@@ -29,6 +34,7 @@ while active:
     actionInput = input(f'{c.ENDC}Enter action from above: ')
     actionInput.lower()
 
+    # Commands
     if actionInput == '0' or actionInput == 'connect':
         Sensors.connect()
     elif actionInput == '1' or actionInput == 'measure':

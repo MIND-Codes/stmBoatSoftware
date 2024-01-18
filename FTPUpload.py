@@ -3,10 +3,12 @@
 # Email:    -   gerloni-luis@outlook.com
 # Github:   -   https://github.com/MIND-Codes
 
+# Imports
 from paramiko import *
 import os
 
 
+# Class for colored outputs
 class c:
     INCIDENTAL = '\33[90m'
     ERROR = '\33[31m'
@@ -16,17 +18,19 @@ class c:
     ENDC = '\033[0m'
 
 
+# Setup for FTP-Server connection
 client = SSHClient()
 client.load_host_keys(r'C:\Users\luisg\.ssh\known_hosts')
 client.load_system_host_keys()
 client.set_missing_host_key_policy(AutoAddPolicy())
 
+# Connection to FTP-Server and getting current working directory on local computer
 client.connect('192.168.169.61', username='mint', password='mintstm')
 ftp = client.open_sftp()
-
 cwd = os.getcwd()
 
 
+# Function to upload files to FTP-Server
 def saveValue(fileName):
     try:
         ftp.put(fr'{cwd}\Values {fileName}.csv',

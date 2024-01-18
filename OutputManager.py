@@ -67,7 +67,7 @@ def process(fileName):
     print(f"{c.HIGHLIGHT}--------------------Gewässergüteklasse--------------------")
 
     values[3] = 22.477 * math.log(values[3]) - 35.65
-    values[4] = 26.012 * math.log(values[4]) - 59.874
+    values[4] = -1.5097*(values[4]**2) + 25.708*values[4] - 111.53
     p = float(input(f"{c.WARNING}Phosphat: "))
     p = 0.002 * p ** 2 - 0.008 * p + 0.3239
     b = input(f"{c.WARNING}BSB5: ")
