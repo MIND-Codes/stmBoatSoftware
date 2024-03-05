@@ -1,12 +1,12 @@
 [
   {
+    "listing": "/src/list.html",
+    "items": []
+  },
+  {
     "listing": "/slides/slidelist.html",
     "items": [
       "/slides/slide1.html"
     ]
-  },
-  {
-    "listing": "/src/list.html",
-    "items": []
   }
 ]

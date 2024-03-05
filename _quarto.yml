@@ -56,13 +56,13 @@ website:
       - text: "---"
       - section: "Low Cost Boat"
         contents:
-          - boat/page1.qmd
-          - boat/page2.qmd
+          - boat/boat1.qmd
+          - boat/boat2.qmd
       - text: "---"
       - section: "Concept & Background"
         contents:
-          - c_b/pag1.qmd
-          -  c_b/pag2.qmd
+          - c_b/c_b1.qmd
+          - c_b/c_b2.qmd
       - text: "---"
       - section: "Software & Print sources"
         contents:
