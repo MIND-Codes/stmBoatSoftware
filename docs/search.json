@@ -1,0 +1,268 @@
+[
+  {
+    "objectID": "base/about.html",
+    "href": "base/about.html",
+    "title": "About this site",
+    "section": "",
+    "text": "About this site\nThis page summarizes the essential workflows , basic literature and web resources dealing with the stmBoat project"
+  },
+  {
+    "objectID": "base/faq.html",
+    "href": "base/faq.html",
+    "title": "Frequently asked Questions",
+    "section": "",
+    "text": "This is a senseless question to meet a meaningfull answer\n\n\n\n\n\n\n\n\n\nThis is a meaningful answer to a senseless question\n\n\n\n\n\n\n\n\n\nLearn More…\n\n\n\n\n\nThis is a even more meaningful answer to a senseless question"
+  },
+  {
+    "objectID": "base/faq.html#make-sense-topic",
+    "href": "base/faq.html#make-sense-topic",
+    "title": "Frequently asked Questions",
+    "section": "",
+    "text": "This is a senseless question to meet a meaningfull answer\n\n\n\n\n\n\n\n\n\nThis is a meaningful answer to a senseless question\n\n\n\n\n\n\n\n\n\nLearn More…\n\n\n\n\n\nThis is a even more meaningful answer to a senseless question"
+  },
+  {
+    "objectID": "uav/uav-index.html#software",
+    "href": "uav/uav-index.html#software",
+    "title": "Budget UAVs",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "uav/uav-index.html#hardware",
+    "href": "uav/uav-index.html#hardware",
+    "title": "Budget UAVs",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "uav/listing1.html",
+    "href": "uav/listing1.html",
+    "title": "Software & Materials",
+    "section": "",
+    "text": "Micro-Remote-Sensing course materials\nBasic Flight Planning¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nUsing QgroundControl¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nGetting Started Youtube guide for using QGroundControl"
+  },
+  {
+    "objectID": "uav/listing1.html#things-you-need",
+    "href": "uav/listing1.html#things-you-need",
+    "title": "Software & Materials",
+    "section": "",
+    "text": "Micro-Remote-Sensing course materials\nBasic Flight Planning¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nUsing QgroundControl¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nGetting Started Youtube guide for using QGroundControl"
+  },
+  {
+    "objectID": "uav/listing1.html#software",
+    "href": "uav/listing1.html#software",
+    "title": "Software & Materials",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "uav/listing1.html#hardware",
+    "href": "uav/listing1.html#hardware",
+    "title": "Software & Materials",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "uav/products.html#software",
+    "href": "uav/products.html#software",
+    "title": "Orthomimages and Point Clouds from UAV",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "uav/products.html#hardware",
+    "href": "uav/products.html#hardware",
+    "title": "Orthomimages and Point Clouds from UAV",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "slides/slide1.html#header-12",
+    "href": "slides/slide1.html#header-12",
+    "title": "Slides and extensions",
+    "section": "Header (1|2)",
+    "text": "Header (1|2)\nThe support of header and footer logic is provided by the plugin reveal-header. it is activated by:\nfilters:\n  - reveal-header"
+  },
+  {
+    "objectID": "slides/slide1.html#header-22",
+    "href": "slides/slide1.html#header-22",
+    "title": "Slides and extensions",
+    "section": "Header (2|2)",
+    "text": "Header (2|2)\nIn this example you will find a basic header and footer text, pagination and a logo in the upper left corner .\n---\ntitle: \"Slides and extensions\"\nsubtitle: \"basically shows the 3 extensions samples\"\ntitle-slide-attributes:\n  data-background-image: slide1/mof.png\n  data-background-size: contain\n  data-background-opacity: \"0.5\"\nformat: \n  revealjs:\n    slide-number: true\n    footer: &lt;gisma 2023&gt;\n    header: This is the header extension\n    header-logo: slide1/logooil.jpg\n[...]\n---"
+  },
+  {
+    "objectID": "slides/slide1.html#spotlight-12",
+    "href": "slides/slide1.html#spotlight-12",
+    "title": "Slides and extensions",
+    "section": "Spotlight (1|2)",
+    "text": "Spotlight (1|2)\nThe support of a pointer or similar pointing features is provided by the plugin spotlight. it is activated by:\nrevealjs-plugins:\n  - spotlight"
+  },
+  {
+    "objectID": "slides/slide1.html#spotlight-22",
+    "href": "slides/slide1.html#spotlight-22",
+    "title": "Slides and extensions",
+    "section": "Spotlight (2|2)",
+    "text": "Spotlight (2|2)\nCurrently the spotlight is set to a red dot pointer. Just press the left mouse button and use it. It is defined in the header:\n---\n[...]\nformat: \n  revealjs:\n    slide-number: true\n    footer: &lt;gisma 2023&gt;\n    header: This is the header extension\n    header-logo: slide1/logooil.jpg\n    spotlight:\n      useAsPointer: true\n      size: 5\n\nfilters:\n  - roughnotation\n  - reveal-header\nrevealjs-plugins:\n  - spotlight\n---"
+  },
+  {
+    "objectID": "slides/slide1.html#highlighting-concept",
+    "href": "slides/slide1.html#highlighting-concept",
+    "title": "Slides and extensions",
+    "section": "Highlighting concept",
+    "text": "Highlighting concept\nThe support of complex highlighting etc. is provided by the plugin roughnotation. it is activated by:\nfilters:\n  - roughnotation\nTo activate the highlighting interactively press the r key. It will start any notation animations:\nI will be highlighted, and so will these words right here"
+  },
+  {
+    "objectID": "slides/slide1.html#options",
+    "href": "slides/slide1.html#options",
+    "title": "Slides and extensions",
+    "section": "Options",
+    "text": "Options\nThere are many types of options we can use (Press r to show)\n\ntype\nanimate\nanimationDuration\ncolor\nstrokeWidth\nmultiline multiline multiline multiline multiline multiline multiline multiline multiline multiline\niterations\nrtl"
+  },
+  {
+    "objectID": "slides/slide1.html#options-1",
+    "href": "slides/slide1.html#options-1",
+    "title": "Slides and extensions",
+    "section": "Options",
+    "text": "Options\n(Press r to show)\nThe options are applied by adding arguments like so {.rn rn-color=orange rn-type=circle}\nSo to add a orange circle or turn off animations by adding rn-animate=false\nNote that the arguments are all prefixed with rn-, are not comma-separated, logical values are written as true or false and that strings do not have to be in quotes"
+  },
+  {
+    "objectID": "slides/slide1.html#options---types",
+    "href": "slides/slide1.html#options---types",
+    "title": "Slides and extensions",
+    "section": "Options - types",
+    "text": "Options - types\n(Press r to show)\n\n\nUnderline\nBox\nCircle\nHighlight\nStrike-Through\nCrossed-off\n\nMany types to choose from!\nHyphenated options can be used like so rn-type=strike-through"
+  },
+  {
+    "objectID": "slides/slide1.html#options---multiline",
+    "href": "slides/slide1.html#options---multiline",
+    "title": "Slides and extensions",
+    "section": "Options - Multiline",
+    "text": "Options - Multiline\n(Press r to show)\nThe options rn-multiline=true can be added to make a highligher work across multiple lines.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan nisi hendrerit augue molestie tempus. Phasellus purus quam, aliquet nec commodo quis, pharetra ut orci. Donec laoreet ligula nisl, placerat molestie mauris luctus id. Fusce dapibus non libero nec lobortis."
+  },
+  {
+    "objectID": "slides/slide1.html#all-about-time",
+    "href": "slides/slide1.html#all-about-time",
+    "title": "Slides and extensions",
+    "section": "All about Time",
+    "text": "All about Time\n(Press r to show)\nUnless otherwise specified, all annotations will occur at the same time. Set the rn-index to specify order\nNo rn-index\nrn-index set to 1\nrn-index set to 2\nrn-index set to 3\nrn-index set to 4"
+  },
+  {
+    "objectID": "slides/slide1.html#fenced-divs",
+    "href": "slides/slide1.html#fenced-divs",
+    "title": "Slides and extensions",
+    "section": "Fenced divs",
+    "text": "Fenced divs\nYou can also use fenced divs if you want to apply the changes to larger sections of of the slide\n::: {.rn rn-type=box rn-color=red}\nHere is some text\n\nAnd there is more here\n:::\n\nHere is some text\nAnd there is more here"
+  },
+  {
+    "objectID": "slides/slide1.html#known-issues",
+    "href": "slides/slide1.html#known-issues",
+    "title": "Slides and extensions",
+    "section": "Known issues",
+    "text": "Known issues\ndoesn’t show correctly in RStudio IDE\nDepending on Browser and setting use the CTRL +/- zoom to place the highlights at the correct places"
+  },
+  {
+    "objectID": "slides/slide1.html#basic-reference",
+    "href": "slides/slide1.html#basic-reference",
+    "title": "Slides and extensions",
+    "section": "Basic Reference",
+    "text": "Basic Reference\nFind more informations at Quarto RevealJS Documentation\n\n\n&lt;gisma 2023&gt;\n\n\n\n\n\n\n \n\n\nThis is the header extension"
+  },
+  {
+    "objectID": "slides/slidelist.html",
+    "href": "slides/slidelist.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSlides and extensions\n\n\ngisma team\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "uav/planning.html#software",
+    "href": "uav/planning.html#software",
+    "title": "Planning UAV survey flights",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "uav/planning.html#hardware",
+    "href": "uav/planning.html#hardware",
+    "title": "Planning UAV survey flights",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "uav/dronedb.html",
+    "href": "uav/dronedb.html",
+    "title": "Setup droneDB",
+    "section": "",
+    "text": "The two self hosting variants of droneDB Registry or Server can be made to run without problems for demo purposes. Precondition is a complete installation of docker and/or of docker-compose. However the setup of the directories users and rights is poorly documented. If you want to run the operational production mode on a server you have to make some adjustments."
+  },
+  {
+    "objectID": "uav/dronedb.html#introduction",
+    "href": "uav/dronedb.html#introduction",
+    "title": "Setup droneDB",
+    "section": "",
+    "text": "The two self hosting variants of droneDB Registry or Server can be made to run without problems for demo purposes. Precondition is a complete installation of docker and/or of docker-compose. However the setup of the directories users and rights is poorly documented. If you want to run the operational production mode on a server you have to make some adjustments."
+  },
+  {
+    "objectID": "uav/dronedb.html#installation-and-tweaks",
+    "href": "uav/dronedb.html#installation-and-tweaks",
+    "title": "Setup droneDB",
+    "section": "Installation and tweaks",
+    "text": "Installation and tweaks\nIn the documentation there are several variants of selfhosting droneDB The most stable (Kubuntu 22.04 version 05/23) has been the installation from the sources Running from Source or Running in Production. The latter variant is much less complex. For the source variant the following prerequisites are to be installed compellingly:\n\nBefore building registry ensure you have ddblib in your path, if not, download the latest release and add it to PATH.\nFor the webpack you need NodeJS 14+"
+  },
+  {
+    "objectID": "uav/dronedb.html#folder-structure",
+    "href": "uav/dronedb.html#folder-structure",
+    "title": "Setup droneDB",
+    "section": "Folder Structure",
+    "text": "Folder Structure\nThe droneDB server runs in both installations in the production branch of the docker subdirectory and has a default structure that looks like this. The datasets directory is the default for the directory that contains the data that will be served.\ncreu@deep:~/drone-db-generic/Registry/docker/production$ tree -d\n.\n├── data\n│   ├── cache\n│   │   ├── cache\n│   │   └── policy\n│   ├── ClientApp\n│   │   ├── images\n│   │   ├── nexus\n│   │   ├── photosphereviewer\n│   │   └── potree\n│   │       ├── build\n│   │       │   ├── potree\n│   │       │   │   ├── resources\n│   │       │   │   │   ├── icons\n│   │       │   │   │   │   └── matcap\n│   │       │   │   │   ├── images\n│   │       │   │   │   ├── lang\n│   │       │   │   │   │   ├── de\n│   │       │   │   │   │   ├── dev\n│   │       │   │   │   │   ├── en\n│   │       │   │   │   │   ├── en-US\n│   │       │   │   │   │   ├── es\n│   │       │   │   │   │   ├── fr\n│   │       │   │   │   │   ├── jp\n│   │       │   │   │   │   └── se\n│   │       │   │   │   └── textures\n│   │       │   │   │       ├── matcap\n│   │       │   │   │       ├── navigation\n│   │       │   │   │       ├── skybox\n│   │       │   │   │       └── skybox2\n│   │       │   │   └── workers\n│   │       │   └── shaders\n│   │       ├── libs\n│   │       │   ├── d3\n│   │       │   ├── i18next\n│   │       │   ├── jquery\n│   │       │   ├── jquery-ui\n│   │       │   │   └── images\n│   │       │   ├── jstree\n│   │       │   │   └── themes\n│   │       │   │       └── mixed\n│   │       │   ├── openlayers3\n│   │       │   ├── other\n│   │       │   ├── plasio\n│   │       │   │   ├── js\n│   │       │   │   ├── vendor\n│   │       │   │   └── workers\n│   │       │   ├── proj4\n│   │       │   ├── spectrum\n│   │       │   ├── three.js\n│   │       │   │   ├── build\n│   │       │   │   └── extra\n│   │       │   │       └── lines\n│   │       │   └── tween\n│   │       └── scripts\n│   ├── datasets\n│   │   ├── admin\n│   │   ├── mof\n│   │   │   ├── 0075fe94-f9ec-4567-95b9-03720d30f383\n│   │   │   │   └── 2019_processed\n│   │   │   │       ├── ortho_timeseries\n│   │   │   │       └── tiepoints_timeseries\n│   │   │   ├── 3c8dca40-1802-44ab-9aa6-7475439fab7c\n│   │   │   │   └── L1_2021\n│   │   │   │       ├── orthomosaic\n│   │   │   │       │   ├── 03-21\n│   │   │   │       │   ├── 04-27\n│   │   │   │       │   ├── 05-12\n│   │   │   │       │   ├── 05-14\n│   │   │   │       │   ├── 05-28\n│   │   │   │       │   ├── 06-04\n│   │   │   │       │   ├── 06-23\n│   │   │   │       │   ├── 07-07\n│   │   │   │       │   ├── 07-22\n│   │   │   │       │   ├── 10-01\n│   │   │   │       │   └── 10-26\n│   │   │   │       ├── reports\n│   │   │   │       └── sparseclouds\n│   │   │   └── 64289b60-3c30-4845-938e-29a209bcfebc\n│   │   ├── public\n│   │   │   └── 4265a398-6b09-45d1-858c-c06baceb29f4\n│   │   ├── test-a5ac75a1-8a20-428f-81f6-61f3b9b3b921\n│   │   └── uav-courses\n│   │       ├── 51ef9283-3ec7-414c-bc4e-77ab3314a38f\n│   │       ├── d69cea96-2439-425e-8860-69f1226b1a88\n│   │       │   └── home\n│   │       │       └── creu\n│   │       │           └── Desktop\n│   │       │               └── datasets\n│   │       │                   └── gisma-courses\n│   │       │                       └── 2023-05-24\n│   │       └── e1b624a2-0351-4619-a424-98176b6e3311\n│   │           └── L-3089-2452023-all\n│   │               ├── entwine_pointcloud\n│   │               │   ├── ept-data\n│   │               │   ├── ept-hierarchy\n│   │               │   └── ept-sources\n│   │               ├── odm_dem\n│   │               ├── odm_georeferencing\n│   │               ├── odm_orthophoto\n│   │               └── odm_report\n│   └── logs\n└── registry-data\n    ├── cache\n    ├── ClientApp\n    │   ├── images\n    │   ├── nexus\n    │   ├── photosphereviewer\n    │   └── potree\n    │       ├── build\n    │       │   ├── potree\n    │       │   │   ├── resources\n    │       │   │   │   ├── icons\n    │       │   │   │   │   └── matcap\n    │       │   │   │   ├── images\n    │       │   │   │   ├── lang\n    │       │   │   │   │   ├── de\n    │       │   │   │   │   ├── dev\n    │       │   │   │   │   ├── en\n    │       │   │   │   │   ├── en-US\n    │       │   │   │   │   ├── es\n    │       │   │   │   │   ├── fr\n    │       │   │   │   │   ├── jp\n    │       │   │   │   │   └── se\n    │       │   │   │   └── textures\n    │       │   │   │       ├── matcap\n    │       │   │   │       ├── navigation\n    │       │   │   │       ├── skybox\n    │       │   │   │       └── skybox2\n    │       │   │   └── workers\n    │       │   └── shaders\n    │       ├── libs\n    │       │   ├── d3\n    │       │   ├── i18next\n    │       │   ├── jquery\n    │       │   ├── jquery-ui\n    │       │   │   └── images\n    │       │   ├── jstree\n    │       │   │   └── themes\n    │       │   │       └── mixed\n    │       │   ├── openlayers3\n    │       │   ├── other\n    │       │   ├── plasio\n    │       │   │   ├── js\n    │       │   │   ├── vendor\n    │       │   │   └── workers\n    │       │   ├── proj4\n    │       │   ├── spectrum\n    │       │   ├── three.js\n    │       │   │   ├── build\n    │       │   │   └── extra\n    │       │   │       └── lines\n    │       │   └── tween\n    │       └── scripts\n    └── logs"
+  },
+  {
+    "objectID": "uav/dronedb.html#personal-settings",
+    "href": "uav/dronedb.html#personal-settings",
+    "title": "Setup droneDB",
+    "section": "Personal Settings",
+    "text": "Personal Settings\nIn order to be able to access the data not only locally, the following settings must be made. The easiest way is to edit the appssettings.json as follows:\n{\n  \"AppSettings\": {\n    \"Secret\": \"e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z\",\n    \"TokenExpirationInDays\": 7,\n    \"RevokedTokens\": [],\n    \"AuthProvider\": \"Mysql\",\n    \"RegistryProvider\": \"Mysql\",\n    \"HangfireProvider\": \"Mysql\",\n    \"DefaultAdmin\": {\n      \"Email\": \"your@e.mail\",\n      \"UserName\": \"your-admin-name\",\n      \"Password\": \"your-pw\"\n    },\n    \"StoragePath\": \"./data\",\n    \"DatasetsPath\": \"./datasets\",\n    \"MaxRequestBodySize\": null,\n    \"BatchTokenLength\": 32,\n    \"UploadBatchTimeout\": \"01:00:00\",\n    \"RandomDatasetNameLength\": 16,\n    \"AuthCookieName\": \"jwtToken\",\n    \"ExternalUrlOverride\": \"http://xxx.xxx.xxx.xxx:port-nummer\",\n    \"ExternalAuthUrl\": null,\n    \"CacheProvider\": null,\n    \"EnableStorageLimiter\": false,\n    \"WorkerThreads\": -1,\n    \"CachePath\": \"./cache\",\n    \"ThumbnailsCacheExpiration\": \"00:30:00\",\n    \"TilesCacheExpiration\": \"00:30:00\",\n    \"ClearCacheInterval\": \"01:00:00\"\n  },\n  \"AllowedHosts\": \"*\",\n  \"ConnectionStrings\": {\n    \"IdentityConnection\": \"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1\",\n    \"RegistryConnection\": \"Server=db;Database=RegistryData;Uid=registry;Pwd=password1\",\n    \"HangfireConnection\": \"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true\"\n  },\n  \"Serilog\": {\n    \"LevelSwitches\": {\n      \"$controlSwitch\": \"Warning\"\n    },\n    \"MinimumLevel\": {\n      \"ControlledBy\": \"$controlSwitch\"\n    },\n    \"Using\": [\n      \"Serilog.Sinks.Console\",\n      \"Serilog.Sinks.File\"\n    ],\n    \"WriteTo\": [\n      {\n        \"Name\": \"Console\"\n      },\n      {\n        \"Name\": \"File\",\n        \"Args\": {\n          \"path\": \"./logs/registry.txt\"\n        }\n      }\n    ],\n    \"Enrich\": [\n      \"FromLogContext\",\n      \"WithMachineName\",\n      \"WithThreadId\"\n    ],\n    \"Destructure\": [\n      {\n        \"Name\": \"ToMaximumDepth\",\n        \"Args\": {\n          \"maximumDestructuringDepth\": 4\n        }\n      },\n      {\n        \"Name\": \"ToMaximumStringLength\",\n        \"Args\": {\n          \"maximumStringLength\": 100\n        }\n      },\n      {\n        \"Name\": \"ToMaximumCollectionCount\",\n        \"Args\": {\n          \"maximumCollectionCount\": 10\n        }\n      }\n    ],\n    \"Properties\": {\n      \"Application\": \"Registry\"\n    }\n  }\n}\nImportant are in particular:\n\nExternal URL\nAttention EXACTLY like this, i.e. with http:// and port specification\n``json “ExternalUrlOverride”: “http://xxx.xxx.xxx.xxx:port-nummer”,\n\n#### Storage Path\n\n```json\n    \"StoragePath\": \"./data\",\n    \"DatasetsPath\": \"./datasets\",\n\n\nAdmin\n    \"DefaultAdmin\": {\n      \"Email\": \"your@e.mail\",\n      \"UserName\": \"your-admin-name\",\n      \"Password\": \"your-pw\"\n    },\n\n\nDatabase Passwords\n  \"AllowedHosts\": \"*\",\n  \"ConnectionStrings\": {\n    \"IdentityConnection\": \"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1\",\n    \"RegistryConnection\": \"Server=db;Database=RegistryData;Uid=registry;Pwd=password1\",\n    \"HangfireConnection\": \"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true\"\n  },\nIf you dont want to edit in appsetting.json this can also be created at program start withrun.sh`:\n#!/bin/bash\n\nexport MYSQL_ROOT_PASSWORD=\"password0\"\nexport MYSQL_PASSWORD=\"password01\"\nexport REGISTRY_ADMIN_MAIL=\"your@e.mail\"\nexport REGISTRY_ADMIN_PASSWORD=\"your-pw\"\nexport REGISTRY_SECRET=\"e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z\"\nexport EXTERNAL_URL=\"http://xxx.xxx.xxx.xxx:port-nummer\"\nexport CONTROL_SWITCH='$controlSwitch'\n\nif test -f \".env\"; then\n    echo \"Loading .env file\"\n    # Override default variables from .env file\n    export $(grep -v '^#' .env | xargs)    \nelse\n    echo \".env file does not exist, using default config (NOT FOR PRODUCTION)\"\nfi\n\nrm appsettings.json\nrm initialize.sql\n\nenvsubst &lt; appsettings-template.json &gt; appsettings.json\nenvsubst &lt; initialize-template.sql &gt; initialize.sql\n\nmkdir data\n\nif [[ \"${@#--dry}\" = \"$@\" ]]; then\n    docker-compose up -d    \nelse\n    cat initialize.sql\n    cat appsettings.json\n    docker-compose config   \nfi\nAlternatively and also the suggested variant is to put these settings in a file called .env and then run run.sh. This automatically looks for a .env file and transfers the values.\nMYSQL_ROOT_PASSWORD=\"default-root-password\"\nMYSQL_PASSWORD=\"default-mysql-password\"\nREGISTRY_ADMIN_MAIL=\"test@test.it\"\nREGISTRY_ADMIN_PASSWORD=\"password\"\nREGISTRY_SECRET=\"longandrandomsecrettobegeneratedusingcryptographicallystrongrandomnumbergenerator\"\nEXTERNAL_URL=\"http://xxx.xxx.xxx.xxx:port-nummer\"\nCONTROL_SWITCH='$controlSwitch'\nDepending on the installation, the s must be deleted from the \"credsStore\": \"desktop\" entry in ~/.docker/config.json:\ngeany ~/.docker/config.json\n\n{\n  \"credStore\": \"desktop\"\n}"
+  },
+  {
+    "objectID": "uav/dronedb.html#api-schnittstelle",
+    "href": "uav/dronedb.html#api-schnittstelle",
+    "title": "Setup droneDB",
+    "section": "API Schnittstelle",
+    "text": "API Schnittstelle\nMit Hilfe von von swagger können die API-Befehle in einer GUI ausgeführt werden. So können zb. neue Nutzer angelegt werden.\nhttp://xxx.xxx.xxx.xxx:port-nummer/swagger/index.html"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the stmBoat knowledge base",
+    "section": "",
+    "text": "Welcome to the stmBoat knowledge base"
+  },
+  {
+    "objectID": "base/impressum.html#content-responsibility",
+    "href": "base/impressum.html#content-responsibility",
+    "title": "Impressum",
+    "section": "Content Responsibility",
+    "text": "Content Responsibility\nThe responsibility for the content rests with the instructors. Statements, opinions and/or conclusions are the ones from the instructors and do not necessarily reflect the opinion of the representatives of Marburg University."
+  },
+  {
+    "objectID": "base/impressum.html#content-license",
+    "href": "base/impressum.html#content-license",
+    "title": "Impressum",
+    "section": "Content License",
+    "text": "Content License\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\n\nPrivacy Policy\n\n\nAs of 21. October 2021\n\n\nIntroduction\n\n\nWith the following data protection declaration, we would like to inform you about the types of your personal data (hereinafter also referred to as “data” for short) that we process, for what purposes and to what extent. The privacy policy applies to all processing of personal data carried out by us, both in the context of the provision of our services and in particular on our websites, in mobile applications and within external online presences, such as our social media profiles (hereinafter collectively referred to as “Online Offerings”).\n\n\nThe terms used are not gender-specific.\n\n\nResponsible\n\n\nDr Christoph ReudenbachDeutschhaustr 1035037 Marburg\n\n\nEmail address: reudenbach@uni-marburg.de.\n\n\nImprint: https://www.uni-marburg.de/de/impressum.\n\n\nOverview of Processing\n\n\nThe following overview summarizes the types of data processed and the purposes of their processing, and refers to the data subjects.\n\n\nTypes of Data Processed\n\n\n\nContent data (e.g. input in online forms).\n\n\nContact data (e.g. email, phone numbers).\n\n\nMeta/communication data (e.g. device information, IP addresses).\n\n\nUse data (e.g. websites visited, interest in content, access times).\n\n\n\nCategories of data subjects\n\n\n\nCommunication partners.\n\n\nUsers (e.g.. Website visitors, users of online services).\n\n\n\nPurposes of processing\n\n\n\nDirect marketing (e.g., by email or postal mail).\n\n\nContact requests and communications.\n\n\n\nRelevant legal basis\n\n\nThe following is an overview of the legal basis of the GDPR on the basis of which we process personal data. Please note that in addition to the provisions of the GDPR, national data protection regulations may apply in your or our country of residence or domicile. Furthermore, should more specific legal bases be decisive in individual cases, we will inform you of these in the data protection declaration.\n\n \n\n\nConsent (Art. 6 para. 1 p. 1 lit. a. DSGVO) - The data subject has given his or her consent to the processing of personal data concerning him or her for a specific purpose or purposes.\n\n\nRegistered interests (Art. 6 para. 1 p. 1 lit. f. DSGVO) - Processing is necessary to protect the legitimate interests of the controller or a third party, unless such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require the protection of personal data.\n\n\n\nNational data protection regulations in Germany: In addition to the data protection regulations of the General Data Protection Regulation, national regulations on data protection apply in Germany. These include, in particular, the Act on Protection against Misuse of Personal Data in Data Processing (Federal Data Protection Act - BDSG). In particular, the BDSG contains special regulations on the right to information, the right to erasure, the right to object, the processing of special categories of personal data, processing for other purposes and transmission, as well as automated decision-making in individual cases, including profiling. Furthermore, it regulates data processing for employment purposes (Section 26 BDSG), in particular with regard to the establishment, implementation or termination of employment relationships as well as the consent of employees. Furthermore, state data protection laws of the individual federal states may apply.\n\n \n\nSecurity measures\n\n\nWe take appropriate technical and organizational measures in accordance with the legal requirements, taking into account the state of the art, the implementation costs and the nature, scope, circumstances and purposes of the processing, as well as the different probabilities of occurrence and the extent of the threat to the rights and freedoms of natural persons, in order to ensure a level of protection appropriate to the risk.\n\n.\n\nMeasures include, in particular, ensuring the confidentiality, integrity, and availability of data by controlling physical and electronic access to data as well as access to, entry into, disclosure of, assurance of availability of, and segregation of data concerning them. Furthermore, we have established procedures to ensure the exercise of data subjects’ rights, the deletion of data, and responses to data compromise. Furthermore, we take the protection of personal data into account as early as the development or selection of hardware, software as well as procedures in accordance with the principle of data protection, through technology design and through data protection-friendly default settings.\n\n \n\nDeletion of data\n\n\nThe data processed by us will be deleted in accordance with legal requirements as soon as their consents permitted for processing are revoked or other permissions cease to apply (e.g. if the purpose of processing this data has ceased to apply or it is not necessary for the purpose).\n\n \n\nIf the data are not deleted because they are required for other and legally permissible purposes, their processing will be limited to these purposes. That is, the data will be blocked and not processed for other purposes. This applies, for example, to data that must be retained for reasons of commercial or tax law or whose storage is necessary for the assertion, exercise or defense of legal claims or for the protection of the rights of another natural person or legal entity.\n\n \n\nOur privacy notices may also include further information on the retention and deletion of data that takes precedence for the processing operations in question.\n\n \n\nUse of cookies\n\n\nCookies are text files that contain data from websites or domains visited and are stored by a browser on the user’s computer. The primary purpose of a cookie is to store information about a user during or after their visit within an online site. Stored information may include, for example, language settings on a website, login status, a shopping cart, or where a video was watched. We further include in the term cookies other technologies that perform the same functions as cookies (e.g., when user details are stored using pseudonymous online identifiers, also referred to as “user IDs”)\n\n.\n\nThe following cookie types and functions are distinguished:\n\n\n\nTemporary cookies (also: session or session cookies): Temporary cookies are deleted at the latest after a user has left an online offer and closed his browser.\n\n\nPermanent cookies: Permanent cookies remain stored even after closing the browser. For example, the login status can be saved or preferred content can be displayed directly when the user revisits a website. Likewise, the interests of users used for range measurement or marketing purposes can be stored in such a cookie.\n\n\nFirst-party cookies: First-party cookies are set by ourselves.\n\n\nThird-party cookies (also: third-party cookies): Third-party cookies are mainly used by advertisers (so-called third parties) to process user information.\n\n\nNecessary (also: essential or absolutely necessary) cookies: Cookies may be absolutely necessary for the operation of a website (e.g. to store logins or other user input or for security reasons).\n\n\nStatistics, marketing and personalization cookies: Furthermore, cookies are usually also used in the context of range measurement and when the interests of a user or his behavior (e.g. viewing certain content, use of functions, etc.) on individual web pages are stored in a user profile. Such profiles are used, for example, to show users content that matches their potential interests. This process is also referred to as “tracking”, i.e., tracking the potential interests of users. Insofar as we use cookies or “tracking” technologies, we will inform you separately in our privacy policy or in the context of obtaining consent.\n\n\n\nNotes on legal bases: On which legal basis we process your personal data using cookies depends on whether we ask you for consent. If this is the case and you consent to the use of cookies, the legal basis for the processing of your data is the declared consent. Otherwise, the data processed with the help of cookies is processed on the basis of our legitimate interests (e.g. in a business operation of our online offer and its improvement) or, if the use of cookies is necessary to fulfill our contractual obligations.\n\n.\n\nDuration of storage: If we do not provide you with explicit information about the storage period of permanent cookies (e.g. in the context of a so-called cookie opt-in), please assume that the storage period can be up to two years.\n\n.\n\nGeneral information on revocation and objection (opt-out):  Depending on whether the processing is based on consent or legal permission, you have the option at any time to revoke any consent given or to object to the processing of your data by cookie technologies (collectively referred to as “opt-out”). You can initially declare your objection by means of your browser settings, e.g. by deactivating the use of cookies (whereby this may also restrict the functionality of our online offer). An objection to the use of cookies for online marketing purposes can also be declared by means of a variety of services, especially in the case of tracking, via the websites https://optout.aboutads.info and https://www.youronlinechoices.com/. In addition, you can receive further objection notices in the context of the information on the service providers and cookies used.\n\n.\n\nProcessing of cookie data on the basis of consent: We use a cookie consent management procedure, in the context of which the consent of users to the use of cookies, or the processing and providers mentioned in the cookie consent management procedure can be obtained and managed and revoked by users. Here, the declaration of consent is stored in order not to have to repeat its query and to be able to prove the consent in accordance with the legal obligation. The storage can take place on the server side and/or in a cookie (so-called opt-in cookie, or with the help of comparable technologies), in order to be able to assign the consent to a user or their device. Subject to individual information on the providers of cookie management services, the following information applies: The duration of the storage of consent can be up to two years. Here, a pseudonymous user identifier is formed and stored with the time of consent, information on the scope of consent (e.g., which categories of cookies and/or service providers) as well as the browser, system and end device used.\n\n.\n\n\nTypes of data processed: Usage data (e.g. websites visited, interest in content, access times), meta/communication data (e.g. device information, IP addresses).\n\n\nPersons concerned: Users (e.g. website visitors, users of online services).\n\n\nLegal basis: Consent (Art. 6 para. 1 p. 1 lit. a. DSGVO), Legitimate Interests (Art. 6 para. 1 p. 1 lit. f. DSGVO).\n\n\n\nSurveys and polls\n\n\nThe surveys and polls (hereinafter “surveys”) conducted by us are evaluated anonymously. Personal data is only processed insofar as this is necessary for the provision and technical implementation of the surveys (e.g. processing of the IP address to display the survey in the user’s browser or to enable a resumption of the survey with the help of a temporary cookie (session cookie)) or users have consented.\n\n.\n\nNotes on legal basis: If we ask participants for consent to process their data, this is the legal basis of the processing, otherwise the processing of participants’ data is based on our legitimate interests in conducting an objective survey.\n\n \n\n\nTypes of data processed: Contact data (e.g. email, phone numbers), content data (e.g. input in online forms), usage data (e.g. web pages visited, interest in content, access times), meta/communication data (e.g. device information, IP addresses).\n\n\nParticipants concerned: Communication partners.\n\n\nPurposes of processing: Contact requests and communication, direct marketing (e.g. by e-mail or postal mail).\n\n\nLegal basis: Consent (Art. 6 para. 1 p. 1 lit. a. DSGVO), Legitimate Interests (Art. 6 para. 1 p. 1 lit. f. DSGVO).\n\n\n\nChange and Update Privacy Policy\n\n\nWe encourage you to periodically review the contents of our Privacy Policy. We adapt the Privacy Policy as soon as the changes in the data processing activities we carry out make it necessary. We will inform you as soon as the changes require an act of cooperation on your part (e.g. consent) or other individual notification.\n\n.\n\nWhere we provide addresses and contact information for companies and organizations in this Privacy Policy, please note that addresses may change over time and please check the information before contacting us.\n\n.\n\nRights of data subjects\n\n\nAs a data subject, you are entitled to various rights under the GDPR, which arise in particular from Art. 15 to 21 DSGVO:\n\n\n\nRight to object: You have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data relating to you which is carried out on the basis of Art. 6(1)(e) or (f) DSGVO; this also applies to profiling based on these provisions. If the personal data concerning you is processed for the purpose of direct marketing, you have the right to object at any time to the processing of personal data concerning you for the purpose of such marketing; this also applies to profiling, insofar as it is associated with such direct marketing.\n\n\nRight of withdrawal in the case of consent: You have the right to withdraw any consent you have given at any time.\n\n\nRight of access: You have the right to request confirmation as to whether data in question is being processed and to information about this data, as well as further information and copy of the data in accordance with the legal requirements.\n\n\nRight of rectification: You have the right, in accordance with the legal requirements, to request the completion of the data concerning you or the correction of incorrect data concerning you.\n\n\nRight to erasure and restriction of processing: You have, in accordance with the law, the right to request that data concerning you be erased without undue delay, or alternatively, in accordance with the law, to request restriction of the processing of the data.\n\n\nRight to data portability: You have the right to receive data concerning you, which you have provided to us, in a structured, common and machine-readable format in accordance with the legal requirements, or to demand its transfer to another responsible party.\n\n\nComplaint to supervisory authority: Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual residence, place of work or the place of the alleged infringement, if you consider that the processing of personal data concerning you infringes the requirements of the GDPR.\n\n\n.\n\nDefinitions of Terms\n\n\nThis section provides you with an overview of the terms used in this Privacy Policy. Many of the terms are taken from the law and defined primarily in Article 4 of the GDPR. The legal definitions are binding. The following explanations, on the other hand, are primarily intended to aid understanding. The terms are sorted alphabetically.\n\n \n\n\nPersonal data: “Personal data” means any information relating to an identified or identifiable natural person (hereinafter “data subject”); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier (eg. e.g. cookie) or to one or more special characteristics that are an expression of the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.\n\n\nController: The “controller” is the natural or legal person, public authority, agency or other body which alone or jointly with others determines the purposes and means of the processing of personal data.\n\n\nProcessing: “Processing” means any operation or set of operations which is performed upon personal data, whether or not by automatic means. The term is broad and includes virtually any handling of data, whether collecting, evaluating, storing, transmitting or deleting.\n\n\n\nCreated with free Datenschutz-Generator.de by Dr. Thomas Schwenke"
+  },
+  {
+    "objectID": "base/impressum.html#comments-suggestions",
+    "href": "base/impressum.html#comments-suggestions",
+    "title": "Impressum",
+    "section": "Comments & Suggestions",
+    "text": "Comments & Suggestions"
+  },
+  {
+    "objectID": "src/list.html",
+    "href": "src/list.html",
+    "title": "Software",
+    "section": "",
+    "text": "No matching items"
+  }
+]

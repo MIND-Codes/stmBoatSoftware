@@ -1,0 +1,1 @@
+Sitemap: https://MIND-Codes.github.io/stmBoatSoftware/sitemap.xml

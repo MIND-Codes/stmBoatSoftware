@@ -1,0 +1,92 @@
+
+.sidebar-logo {
+  max-width: 150px;
+}
+
+.sidebar-title {
+  font-size: 1.7rem;
+}
+
+.platform-table td {
+  vertical-align: middle;
+}
+
+.platform-table td > div.sourceCode {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.box {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+
+  border-radius: 3px;
+  opacity: 1.0;
+  background: 5px center/3em no-repeat;
+}
+.scbox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  border-radius: 3px;
+  background: white 5px center/3em no-repeat;
+}
+.infobox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid lightblue;
+  border-radius: 3px;
+  background:  5px center/3em no-repeat;
+}
+
+.successbox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px dashed #DBF9D3;
+  border-radius: 3px;
+  opacity: 1.0;
+  background: 5px center/3em no-repeat;
+}
+
+.cautionbox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid red;
+  color: orange;
+  border-radius: 3px;
+  opacity: 1.0;
+  background: 5px center/3em no-repeat;
+}
+
+.warning{
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 5px;
+  color: red;
+  font-style: italic;
+  opacity: 1.0;
+}
+.info {
+  background-image: url("../images/info.png");
+}
+.ginfo {
+  background-image: url("../images/ginfo.png");
+}
+.caution {
+  background-image: url("../images/danger.png");
+}
+
+.fire {
+  background-image: url("../images/fire.png");
+}
+
+.test {
+  background-image: url("../images/test.png");
+}
+
+.ok {
+  background-image: url("../images/ok.png");
+}
+
+.wt {
+  background-image: url("../images/whereto.png");
+}

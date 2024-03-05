@@ -1,0 +1,386 @@
+---
+title: "Setup droneDB"
+author: "Chris Reudenbach"
+date: 2023-05-28
+format: html
+---
+
+## Introduction
+
+The two self hosting variants of `droneDB` [Registry](https://docs.dronedb.app/docs/registry) or [Server](https://docs.dronedb.app/docs/server) can be made to run without problems for demo purposes.  Precondition is a complete installation of `docker` and/or of `docker-compose`. However the setup of the directories users and rights is poorly documented. If you want to run the operational production mode on a server you have to make some adjustments.
+
+
+## Installation and tweaks
+
+In the documentation there are several variants of selfhosting `droneDB` The most stable (Kubuntu 22.04 version 05/23) has been the installation from the sources [Running from Source](https://docs.dronedb.app/docs/registry#running-from-source) or [Running in Production](https://docs.dronedb.app/docs/registry#running-in-production). The latter variant is much less complex. 
+For the source variant the following prerequisites are to be installed compellingly:
+
+
+
+* Before building registry ensure you have `ddblib` in your path, if not, download the [latest release](https://github.com/DroneDB/DroneDB/releases) and add it to `PATH`.
+* For the webpack you need [NodeJS 14+](https://nodejs.org/download/release/v14.18.3/)
+
+## Folder Structure
+
+The `droneDB` server runs in both installations in the `production` branch of the `docker` subdirectory and has a default structure that looks like this. The `datasets` directory is the default for the directory that contains the data that will be served.
+
+```bash
+creu@deep:~/drone-db-generic/Registry/docker/production$ tree -d
+.
+├── data
+│   ├── cache
+│   │   ├── cache
+│   │   └── policy
+│   ├── ClientApp
+│   │   ├── images
+│   │   ├── nexus
+│   │   ├── photosphereviewer
+│   │   └── potree
+│   │       ├── build
+│   │       │   ├── potree
+│   │       │   │   ├── resources
+│   │       │   │   │   ├── icons
+│   │       │   │   │   │   └── matcap
+│   │       │   │   │   ├── images
+│   │       │   │   │   ├── lang
+│   │       │   │   │   │   ├── de
+│   │       │   │   │   │   ├── dev
+│   │       │   │   │   │   ├── en
+│   │       │   │   │   │   ├── en-US
+│   │       │   │   │   │   ├── es
+│   │       │   │   │   │   ├── fr
+│   │       │   │   │   │   ├── jp
+│   │       │   │   │   │   └── se
+│   │       │   │   │   └── textures
+│   │       │   │   │       ├── matcap
+│   │       │   │   │       ├── navigation
+│   │       │   │   │       ├── skybox
+│   │       │   │   │       └── skybox2
+│   │       │   │   └── workers
+│   │       │   └── shaders
+│   │       ├── libs
+│   │       │   ├── d3
+│   │       │   ├── i18next
+│   │       │   ├── jquery
+│   │       │   ├── jquery-ui
+│   │       │   │   └── images
+│   │       │   ├── jstree
+│   │       │   │   └── themes
+│   │       │   │       └── mixed
+│   │       │   ├── openlayers3
+│   │       │   ├── other
+│   │       │   ├── plasio
+│   │       │   │   ├── js
+│   │       │   │   ├── vendor
+│   │       │   │   └── workers
+│   │       │   ├── proj4
+│   │       │   ├── spectrum
+│   │       │   ├── three.js
+│   │       │   │   ├── build
+│   │       │   │   └── extra
+│   │       │   │       └── lines
+│   │       │   └── tween
+│   │       └── scripts
+│   ├── datasets
+│   │   ├── admin
+│   │   ├── mof
+│   │   │   ├── 0075fe94-f9ec-4567-95b9-03720d30f383
+│   │   │   │   └── 2019_processed
+│   │   │   │       ├── ortho_timeseries
+│   │   │   │       └── tiepoints_timeseries
+│   │   │   ├── 3c8dca40-1802-44ab-9aa6-7475439fab7c
+│   │   │   │   └── L1_2021
+│   │   │   │       ├── orthomosaic
+│   │   │   │       │   ├── 03-21
+│   │   │   │       │   ├── 04-27
+│   │   │   │       │   ├── 05-12
+│   │   │   │       │   ├── 05-14
+│   │   │   │       │   ├── 05-28
+│   │   │   │       │   ├── 06-04
+│   │   │   │       │   ├── 06-23
+│   │   │   │       │   ├── 07-07
+│   │   │   │       │   ├── 07-22
+│   │   │   │       │   ├── 10-01
+│   │   │   │       │   └── 10-26
+│   │   │   │       ├── reports
+│   │   │   │       └── sparseclouds
+│   │   │   └── 64289b60-3c30-4845-938e-29a209bcfebc
+│   │   ├── public
+│   │   │   └── 4265a398-6b09-45d1-858c-c06baceb29f4
+│   │   ├── test-a5ac75a1-8a20-428f-81f6-61f3b9b3b921
+│   │   └── uav-courses
+│   │       ├── 51ef9283-3ec7-414c-bc4e-77ab3314a38f
+│   │       ├── d69cea96-2439-425e-8860-69f1226b1a88
+│   │       │   └── home
+│   │       │       └── creu
+│   │       │           └── Desktop
+│   │       │               └── datasets
+│   │       │                   └── gisma-courses
+│   │       │                       └── 2023-05-24
+│   │       └── e1b624a2-0351-4619-a424-98176b6e3311
+│   │           └── L-3089-2452023-all
+│   │               ├── entwine_pointcloud
+│   │               │   ├── ept-data
+│   │               │   ├── ept-hierarchy
+│   │               │   └── ept-sources
+│   │               ├── odm_dem
+│   │               ├── odm_georeferencing
+│   │               ├── odm_orthophoto
+│   │               └── odm_report
+│   └── logs
+└── registry-data
+    ├── cache
+    ├── ClientApp
+    │   ├── images
+    │   ├── nexus
+    │   ├── photosphereviewer
+    │   └── potree
+    │       ├── build
+    │       │   ├── potree
+    │       │   │   ├── resources
+    │       │   │   │   ├── icons
+    │       │   │   │   │   └── matcap
+    │       │   │   │   ├── images
+    │       │   │   │   ├── lang
+    │       │   │   │   │   ├── de
+    │       │   │   │   │   ├── dev
+    │       │   │   │   │   ├── en
+    │       │   │   │   │   ├── en-US
+    │       │   │   │   │   ├── es
+    │       │   │   │   │   ├── fr
+    │       │   │   │   │   ├── jp
+    │       │   │   │   │   └── se
+    │       │   │   │   └── textures
+    │       │   │   │       ├── matcap
+    │       │   │   │       ├── navigation
+    │       │   │   │       ├── skybox
+    │       │   │   │       └── skybox2
+    │       │   │   └── workers
+    │       │   └── shaders
+    │       ├── libs
+    │       │   ├── d3
+    │       │   ├── i18next
+    │       │   ├── jquery
+    │       │   ├── jquery-ui
+    │       │   │   └── images
+    │       │   ├── jstree
+    │       │   │   └── themes
+    │       │   │       └── mixed
+    │       │   ├── openlayers3
+    │       │   ├── other
+    │       │   ├── plasio
+    │       │   │   ├── js
+    │       │   │   ├── vendor
+    │       │   │   └── workers
+    │       │   ├── proj4
+    │       │   ├── spectrum
+    │       │   ├── three.js
+    │       │   │   ├── build
+    │       │   │   └── extra
+    │       │   │       └── lines
+    │       │   └── tween
+    │       └── scripts
+    └── logs
+
+
+```
+
+## Personal Settings
+
+In order to be able to access the data not only locally, the following settings must be made. The easiest way is to edit the `appssettings.json` as follows:
+
+```json
+{
+  "AppSettings": {
+    "Secret": "e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z",
+    "TokenExpirationInDays": 7,
+    "RevokedTokens": [],
+    "AuthProvider": "Mysql",
+    "RegistryProvider": "Mysql",
+    "HangfireProvider": "Mysql",
+    "DefaultAdmin": {
+      "Email": "your@e.mail",
+      "UserName": "your-admin-name",
+      "Password": "your-pw"
+    },
+    "StoragePath": "./data",
+    "DatasetsPath": "./datasets",
+    "MaxRequestBodySize": null,
+    "BatchTokenLength": 32,
+    "UploadBatchTimeout": "01:00:00",
+    "RandomDatasetNameLength": 16,
+    "AuthCookieName": "jwtToken",
+    "ExternalUrlOverride": "http://xxx.xxx.xxx.xxx:port-nummer",
+    "ExternalAuthUrl": null,
+    "CacheProvider": null,
+    "EnableStorageLimiter": false,
+    "WorkerThreads": -1,
+    "CachePath": "./cache",
+    "ThumbnailsCacheExpiration": "00:30:00",
+    "TilesCacheExpiration": "00:30:00",
+    "ClearCacheInterval": "01:00:00"
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "IdentityConnection": "Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1",
+    "RegistryConnection": "Server=db;Database=RegistryData;Uid=registry;Pwd=password1",
+    "HangfireConnection": "Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true"
+  },
+  "Serilog": {
+    "LevelSwitches": {
+      "$controlSwitch": "Warning"
+    },
+    "MinimumLevel": {
+      "ControlledBy": "$controlSwitch"
+    },
+    "Using": [
+      "Serilog.Sinks.Console",
+      "Serilog.Sinks.File"
+    ],
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "./logs/registry.txt"
+        }
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithThreadId"
+    ],
+    "Destructure": [
+      {
+        "Name": "ToMaximumDepth",
+        "Args": {
+          "maximumDestructuringDepth": 4
+        }
+      },
+      {
+        "Name": "ToMaximumStringLength",
+        "Args": {
+          "maximumStringLength": 100
+        }
+      },
+      {
+        "Name": "ToMaximumCollectionCount",
+        "Args": {
+          "maximumCollectionCount": 10
+        }
+      }
+    ],
+    "Properties": {
+      "Application": "Registry"
+    }
+  }
+}
+```
+Important are in particular:
+
+#### External URL
+
+**Attention EXACTLY like this, i.e. with http:// and port specification**
+
+``json
+    "ExternalUrlOverride": "http://xxx.xxx.xxx.xxx:port-nummer",
+```
+
+#### Storage Path
+
+```json
+    "StoragePath": "./data",
+    "DatasetsPath": "./datasets",
+```
+
+#### Admin
+```json
+    "DefaultAdmin": {
+      "Email": "your@e.mail",
+      "UserName": "your-admin-name",
+      "Password": "your-pw"
+    },
+```    
+#### Database Passwords
+
+```json
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "IdentityConnection": "Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1",
+    "RegistryConnection": "Server=db;Database=RegistryData;Uid=registry;Pwd=password1",
+    "HangfireConnection": "Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true"
+  },
+```
+
+If you don`t want to edit in appsetting.json this can also be created at program start with `run.sh`:
+
+```bash
+#!/bin/bash
+
+export MYSQL_ROOT_PASSWORD="password0"
+export MYSQL_PASSWORD="password01"
+export REGISTRY_ADMIN_MAIL="your@e.mail"
+export REGISTRY_ADMIN_PASSWORD="your-pw"
+export REGISTRY_SECRET="e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z"
+export EXTERNAL_URL="http://xxx.xxx.xxx.xxx:port-nummer"
+export CONTROL_SWITCH='$controlSwitch'
+
+if test -f ".env"; then
+    echo "Loading .env file"
+    # Override default variables from .env file
+    export $(grep -v '^#' .env | xargs)    
+else
+    echo ".env file does not exist, using default config (NOT FOR PRODUCTION)"
+fi
+
+rm appsettings.json
+rm initialize.sql
+
+envsubst < appsettings-template.json > appsettings.json
+envsubst < initialize-template.sql > initialize.sql
+
+mkdir data
+
+if [[ "${@#--dry}" = "$@" ]]; then
+    docker-compose up -d    
+else
+    cat initialize.sql
+    cat appsettings.json
+    docker-compose config   
+fi
+```
+
+Alternatively and also the suggested variant is to put these settings in a file called `.env` and then run `run.sh`. This automatically looks for a `.env` file and transfers the values.
+
+
+```json
+MYSQL_ROOT_PASSWORD="default-root-password"
+MYSQL_PASSWORD="default-mysql-password"
+REGISTRY_ADMIN_MAIL="test@test.it"
+REGISTRY_ADMIN_PASSWORD="password"
+REGISTRY_SECRET="longandrandomsecrettobegeneratedusingcryptographicallystrongrandomnumbergenerator"
+EXTERNAL_URL="http://xxx.xxx.xxx.xxx:port-nummer"
+CONTROL_SWITCH='$controlSwitch'
+```
+
+Depending on the installation, the `s` must be deleted from the `"credsStore": "desktop"` entry in `~/.docker/config.json`:
+
+``` BASH
+geany ~/.docker/config.json
+
+{
+  "credStore": "desktop"
+}
+
+```
+
+## API Schnittstelle
+
+Mit Hilfe von von `swagger`  können die API-Befehle in einer GUI ausgeführt werden. So können zb. neue Nutzer angelegt werden.
+```bash
+http://xxx.xxx.xxx.xxx:port-nummer/swagger/index.html
+```
+

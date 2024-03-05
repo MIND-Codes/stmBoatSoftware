@@ -1,0 +1,96 @@
+project: 
+  type: website
+  output-dir: docs
+execute:
+  freeze: auto  
+website:
+  open-graph: true
+  page-footer: "gisma (2022) [Impressum](base/impressum.html)" 
+  
+  page-navigation: true  
+  title: "stmBoat knowledge base"
+  site-url: https://MIND-Codes.github.io/stmBoatSoftware
+  repo-url: https://github.com/MIND-Codes/stmBoatSoftware
+  repo-actions: [edit, issue]
+  search: 
+    location: navbar
+    type: textbox
+
+
+  comments:
+    utterances:
+      repo: MIND-Codes/stmBoatSoftware
+
+  navbar:
+    logo: /images/logooil.png
+    left:
+      - icon: question-square-fill
+        text: FAQ
+        href: base/faq.qmd
+      - icon: file-slides-fill
+        text: Slides
+        href: slides/slidelist.qmd
+
+    right:
+      - icon: chat-left-text-fill
+        text: plusMint
+        href: https://steinmuehle.de/plus-mint/
+
+    
+         
+    tools: 
+      - icon: github
+        href: https://github.com/MIND-Codes/stmBoatSoftware
+        text: "boat repo" 
+  sidebar:
+    # logo: /images/logo.jpg
+    pinned: true
+    align: center
+    style: "docked"
+    collapse-level: 1
+    contents:
+      - section: "Welcome"
+        contents:
+          - index.md
+          - base/about.qmd
+      - text: "---"
+      - section: "Low Cost Boat"
+        contents:
+          - uav/uav-index.qmd
+          - uav/listing1.qmd
+          - uav/products.qmd
+          # - href: https://gisma-courses.github.io/LV-uav-workflow/modules/module-introduction/
+          #   text: Basic Readings        
+          # - href: https://gisma-courses.github.io/LV-uav-workflow/modules/module-fieldwork/
+          #   text: uav/Flight Planning
+      - text: "---"
+      - section: "Concept & Background"
+        contents:
+          - mclim/mc-index.qmd
+          - mclim/sensors.qmd
+      - text: "---"
+      - section: "Software & Print sources"
+        contents:
+           - href: https://github.com/MIND-Codes/stmBoatSoftware/tree/main/src
+             text: Source Code   
+           - href: https://github.com/MIND-Codes/stmBoatSoftware/tree/main/stl
+             text: 3D Print       
+             
+       
+
+#format: dokuwiki
+format:
+  html:
+    theme:
+      light: lumen
+      dark: [lumen, css/theme-dark.scss]
+    code-background: true
+    code-copy: true
+    css: css/styles.css
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/www\.quarto\.org\/custom'
+# filters:
+#   - include-files.lua
+#   - quarto
