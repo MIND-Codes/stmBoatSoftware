@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://MIND-Codes.github.io/stmBoatSoftware/base/about.html</loc>
-    <lastmod>2024-03-05T18:37:02.582Z</lastmod>
+    <lastmod>2024-03-05T18:47:48.215Z</lastmod>
   </url>
   <url>
     <loc>https://MIND-Codes.github.io/stmBoatSoftware/base/faq.html</loc>
-    <lastmod>2024-03-05T17:56:27.325Z</lastmod>
+    <lastmod>2024-03-05T18:47:46.879Z</lastmod>
   </url>
   <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/uav/uav-index.html</loc>
-    <lastmod>2024-03-05T17:55:49.620Z</lastmod>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/c_b/dronedb.html</loc>
+    <lastmod>2024-03-05T18:47:46.259Z</lastmod>
   </url>
   <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/uav/listing1.html</loc>
-    <lastmod>2024-03-05T17:55:48.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/uav/products.html</loc>
-    <lastmod>2024-03-05T17:55:48.172Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/slides/slide1.html</loc>
-    <lastmod>2024-03-05T18:25:15.974Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/slides/slidelist.html</loc>
-    <lastmod>2024-03-05T17:56:20.005Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/uav/planning.html</loc>
-    <lastmod>2024-03-05T17:55:48.480Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/uav/dronedb.html</loc>
-    <lastmod>2024-03-05T17:55:49.320Z</lastmod>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/c_b/planning.html</loc>
+    <lastmod>2024-03-05T18:47:45.363Z</lastmod>
   </url>
   <url>
     <loc>https://MIND-Codes.github.io/stmBoatSoftware/index.html</loc>
-    <lastmod>2024-03-05T18:37:02.938Z</lastmod>
+    <lastmod>2024-03-05T18:47:44.759Z</lastmod>
   </url>
   <url>
-    <loc>https://MIND-Codes.github.io/stmBoatSoftware/base/impressum.html</loc>
-    <lastmod>2024-03-05T17:55:51.380Z</lastmod>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/slides/slidelist.html</loc>
+    <lastmod>2024-03-05T18:47:44.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/slides/slide1.html</loc>
+    <lastmod>2024-03-05T18:47:43.759Z</lastmod>
   </url>
   <url>
     <loc>https://MIND-Codes.github.io/stmBoatSoftware/src/list.html</loc>
-    <lastmod>2024-03-05T18:31:44.898Z</lastmod>
+    <lastmod>2024-03-05T18:47:44.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/c_b/products.html</loc>
+    <lastmod>2024-03-05T18:47:45.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/c_b/listing1.html</loc>
+    <lastmod>2024-03-05T18:47:45.719Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/c_b/uav-index.html</loc>
+    <lastmod>2024-03-05T18:47:46.571Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MIND-Codes.github.io/stmBoatSoftware/base/impressum.html</loc>
+    <lastmod>2024-03-05T18:47:47.895Z</lastmod>
   </url>
 </urlset>

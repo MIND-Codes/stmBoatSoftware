@@ -21,60 +21,74 @@
     "text": "This is a senseless question to meet a meaningfull answer\n\n\n\n\n\n\n\n\n\nThis is a meaningful answer to a senseless question\n\n\n\n\n\n\n\n\n\nLearn More…\n\n\n\n\n\nThis is a even more meaningful answer to a senseless question"
   },
   {
-    "objectID": "uav/uav-index.html#software",
-    "href": "uav/uav-index.html#software",
-    "title": "Budget UAVs",
-    "section": "Software",
-    "text": "Software"
-  },
-  {
-    "objectID": "uav/uav-index.html#hardware",
-    "href": "uav/uav-index.html#hardware",
-    "title": "Budget UAVs",
-    "section": "Hardware",
-    "text": "Hardware"
-  },
-  {
-    "objectID": "uav/listing1.html",
-    "href": "uav/listing1.html",
-    "title": "Software & Materials",
+    "objectID": "c_b/dronedb.html",
+    "href": "c_b/dronedb.html",
+    "title": "Setup droneDB",
     "section": "",
-    "text": "Micro-Remote-Sensing course materials\nBasic Flight Planning¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nUsing QgroundControl¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nGetting Started Youtube guide for using QGroundControl"
+    "text": "The two self hosting variants of droneDB Registry or Server can be made to run without problems for demo purposes. Precondition is a complete installation of docker and/or of docker-compose. However the setup of the directories users and rights is poorly documented. If you want to run the operational production mode on a server you have to make some adjustments."
   },
   {
-    "objectID": "uav/listing1.html#things-you-need",
-    "href": "uav/listing1.html#things-you-need",
-    "title": "Software & Materials",
+    "objectID": "c_b/dronedb.html#introduction",
+    "href": "c_b/dronedb.html#introduction",
+    "title": "Setup droneDB",
     "section": "",
-    "text": "Micro-Remote-Sensing course materials\nBasic Flight Planning¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nUsing QgroundControl¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nGetting Started Youtube guide for using QGroundControl"
+    "text": "The two self hosting variants of droneDB Registry or Server can be made to run without problems for demo purposes. Precondition is a complete installation of docker and/or of docker-compose. However the setup of the directories users and rights is poorly documented. If you want to run the operational production mode on a server you have to make some adjustments."
   },
   {
-    "objectID": "uav/listing1.html#software",
-    "href": "uav/listing1.html#software",
-    "title": "Software & Materials",
+    "objectID": "c_b/dronedb.html#installation-and-tweaks",
+    "href": "c_b/dronedb.html#installation-and-tweaks",
+    "title": "Setup droneDB",
+    "section": "Installation and tweaks",
+    "text": "Installation and tweaks\nIn the documentation there are several variants of selfhosting droneDB The most stable (Kubuntu 22.04 version 05/23) has been the installation from the sources Running from Source or Running in Production. The latter variant is much less complex. For the source variant the following prerequisites are to be installed compellingly:\n\nBefore building registry ensure you have ddblib in your path, if not, download the latest release and add it to PATH.\nFor the webpack you need NodeJS 14+"
+  },
+  {
+    "objectID": "c_b/dronedb.html#folder-structure",
+    "href": "c_b/dronedb.html#folder-structure",
+    "title": "Setup droneDB",
+    "section": "Folder Structure",
+    "text": "Folder Structure\nThe droneDB server runs in both installations in the production branch of the docker subdirectory and has a default structure that looks like this. The datasets directory is the default for the directory that contains the data that will be served.\ncreu@deep:~/drone-db-generic/Registry/docker/production$ tree -d\n.\n├── data\n│   ├── cache\n│   │   ├── cache\n│   │   └── policy\n│   ├── ClientApp\n│   │   ├── images\n│   │   ├── nexus\n│   │   ├── photosphereviewer\n│   │   └── potree\n│   │       ├── build\n│   │       │   ├── potree\n│   │       │   │   ├── resources\n│   │       │   │   │   ├── icons\n│   │       │   │   │   │   └── matcap\n│   │       │   │   │   ├── images\n│   │       │   │   │   ├── lang\n│   │       │   │   │   │   ├── de\n│   │       │   │   │   │   ├── dev\n│   │       │   │   │   │   ├── en\n│   │       │   │   │   │   ├── en-US\n│   │       │   │   │   │   ├── es\n│   │       │   │   │   │   ├── fr\n│   │       │   │   │   │   ├── jp\n│   │       │   │   │   │   └── se\n│   │       │   │   │   └── textures\n│   │       │   │   │       ├── matcap\n│   │       │   │   │       ├── navigation\n│   │       │   │   │       ├── skybox\n│   │       │   │   │       └── skybox2\n│   │       │   │   └── workers\n│   │       │   └── shaders\n│   │       ├── libs\n│   │       │   ├── d3\n│   │       │   ├── i18next\n│   │       │   ├── jquery\n│   │       │   ├── jquery-ui\n│   │       │   │   └── images\n│   │       │   ├── jstree\n│   │       │   │   └── themes\n│   │       │   │       └── mixed\n│   │       │   ├── openlayers3\n│   │       │   ├── other\n│   │       │   ├── plasio\n│   │       │   │   ├── js\n│   │       │   │   ├── vendor\n│   │       │   │   └── workers\n│   │       │   ├── proj4\n│   │       │   ├── spectrum\n│   │       │   ├── three.js\n│   │       │   │   ├── build\n│   │       │   │   └── extra\n│   │       │   │       └── lines\n│   │       │   └── tween\n│   │       └── scripts\n│   ├── datasets\n│   │   ├── admin\n│   │   ├── mof\n│   │   │   ├── 0075fe94-f9ec-4567-95b9-03720d30f383\n│   │   │   │   └── 2019_processed\n│   │   │   │       ├── ortho_timeseries\n│   │   │   │       └── tiepoints_timeseries\n│   │   │   ├── 3c8dca40-1802-44ab-9aa6-7475439fab7c\n│   │   │   │   └── L1_2021\n│   │   │   │       ├── orthomosaic\n│   │   │   │       │   ├── 03-21\n│   │   │   │       │   ├── 04-27\n│   │   │   │       │   ├── 05-12\n│   │   │   │       │   ├── 05-14\n│   │   │   │       │   ├── 05-28\n│   │   │   │       │   ├── 06-04\n│   │   │   │       │   ├── 06-23\n│   │   │   │       │   ├── 07-07\n│   │   │   │       │   ├── 07-22\n│   │   │   │       │   ├── 10-01\n│   │   │   │       │   └── 10-26\n│   │   │   │       ├── reports\n│   │   │   │       └── sparseclouds\n│   │   │   └── 64289b60-3c30-4845-938e-29a209bcfebc\n│   │   ├── public\n│   │   │   └── 4265a398-6b09-45d1-858c-c06baceb29f4\n│   │   ├── test-a5ac75a1-8a20-428f-81f6-61f3b9b3b921\n│   │   └── uav-courses\n│   │       ├── 51ef9283-3ec7-414c-bc4e-77ab3314a38f\n│   │       ├── d69cea96-2439-425e-8860-69f1226b1a88\n│   │       │   └── home\n│   │       │       └── creu\n│   │       │           └── Desktop\n│   │       │               └── datasets\n│   │       │                   └── gisma-courses\n│   │       │                       └── 2023-05-24\n│   │       └── e1b624a2-0351-4619-a424-98176b6e3311\n│   │           └── L-3089-2452023-all\n│   │               ├── entwine_pointcloud\n│   │               │   ├── ept-data\n│   │               │   ├── ept-hierarchy\n│   │               │   └── ept-sources\n│   │               ├── odm_dem\n│   │               ├── odm_georeferencing\n│   │               ├── odm_orthophoto\n│   │               └── odm_report\n│   └── logs\n└── registry-data\n    ├── cache\n    ├── ClientApp\n    │   ├── images\n    │   ├── nexus\n    │   ├── photosphereviewer\n    │   └── potree\n    │       ├── build\n    │       │   ├── potree\n    │       │   │   ├── resources\n    │       │   │   │   ├── icons\n    │       │   │   │   │   └── matcap\n    │       │   │   │   ├── images\n    │       │   │   │   ├── lang\n    │       │   │   │   │   ├── de\n    │       │   │   │   │   ├── dev\n    │       │   │   │   │   ├── en\n    │       │   │   │   │   ├── en-US\n    │       │   │   │   │   ├── es\n    │       │   │   │   │   ├── fr\n    │       │   │   │   │   ├── jp\n    │       │   │   │   │   └── se\n    │       │   │   │   └── textures\n    │       │   │   │       ├── matcap\n    │       │   │   │       ├── navigation\n    │       │   │   │       ├── skybox\n    │       │   │   │       └── skybox2\n    │       │   │   └── workers\n    │       │   └── shaders\n    │       ├── libs\n    │       │   ├── d3\n    │       │   ├── i18next\n    │       │   ├── jquery\n    │       │   ├── jquery-ui\n    │       │   │   └── images\n    │       │   ├── jstree\n    │       │   │   └── themes\n    │       │   │       └── mixed\n    │       │   ├── openlayers3\n    │       │   ├── other\n    │       │   ├── plasio\n    │       │   │   ├── js\n    │       │   │   ├── vendor\n    │       │   │   └── workers\n    │       │   ├── proj4\n    │       │   ├── spectrum\n    │       │   ├── three.js\n    │       │   │   ├── build\n    │       │   │   └── extra\n    │       │   │       └── lines\n    │       │   └── tween\n    │       └── scripts\n    └── logs"
+  },
+  {
+    "objectID": "c_b/dronedb.html#personal-settings",
+    "href": "c_b/dronedb.html#personal-settings",
+    "title": "Setup droneDB",
+    "section": "Personal Settings",
+    "text": "Personal Settings\nIn order to be able to access the data not only locally, the following settings must be made. The easiest way is to edit the appssettings.json as follows:\n{\n  \"AppSettings\": {\n    \"Secret\": \"e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z\",\n    \"TokenExpirationInDays\": 7,\n    \"RevokedTokens\": [],\n    \"AuthProvider\": \"Mysql\",\n    \"RegistryProvider\": \"Mysql\",\n    \"HangfireProvider\": \"Mysql\",\n    \"DefaultAdmin\": {\n      \"Email\": \"your@e.mail\",\n      \"UserName\": \"your-admin-name\",\n      \"Password\": \"your-pw\"\n    },\n    \"StoragePath\": \"./data\",\n    \"DatasetsPath\": \"./datasets\",\n    \"MaxRequestBodySize\": null,\n    \"BatchTokenLength\": 32,\n    \"UploadBatchTimeout\": \"01:00:00\",\n    \"RandomDatasetNameLength\": 16,\n    \"AuthCookieName\": \"jwtToken\",\n    \"ExternalUrlOverride\": \"http://xxx.xxx.xxx.xxx:port-nummer\",\n    \"ExternalAuthUrl\": null,\n    \"CacheProvider\": null,\n    \"EnableStorageLimiter\": false,\n    \"WorkerThreads\": -1,\n    \"CachePath\": \"./cache\",\n    \"ThumbnailsCacheExpiration\": \"00:30:00\",\n    \"TilesCacheExpiration\": \"00:30:00\",\n    \"ClearCacheInterval\": \"01:00:00\"\n  },\n  \"AllowedHosts\": \"*\",\n  \"ConnectionStrings\": {\n    \"IdentityConnection\": \"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1\",\n    \"RegistryConnection\": \"Server=db;Database=RegistryData;Uid=registry;Pwd=password1\",\n    \"HangfireConnection\": \"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true\"\n  },\n  \"Serilog\": {\n    \"LevelSwitches\": {\n      \"$controlSwitch\": \"Warning\"\n    },\n    \"MinimumLevel\": {\n      \"ControlledBy\": \"$controlSwitch\"\n    },\n    \"Using\": [\n      \"Serilog.Sinks.Console\",\n      \"Serilog.Sinks.File\"\n    ],\n    \"WriteTo\": [\n      {\n        \"Name\": \"Console\"\n      },\n      {\n        \"Name\": \"File\",\n        \"Args\": {\n          \"path\": \"./logs/registry.txt\"\n        }\n      }\n    ],\n    \"Enrich\": [\n      \"FromLogContext\",\n      \"WithMachineName\",\n      \"WithThreadId\"\n    ],\n    \"Destructure\": [\n      {\n        \"Name\": \"ToMaximumDepth\",\n        \"Args\": {\n          \"maximumDestructuringDepth\": 4\n        }\n      },\n      {\n        \"Name\": \"ToMaximumStringLength\",\n        \"Args\": {\n          \"maximumStringLength\": 100\n        }\n      },\n      {\n        \"Name\": \"ToMaximumCollectionCount\",\n        \"Args\": {\n          \"maximumCollectionCount\": 10\n        }\n      }\n    ],\n    \"Properties\": {\n      \"Application\": \"Registry\"\n    }\n  }\n}\nImportant are in particular:\n\nExternal URL\nAttention EXACTLY like this, i.e. with http:// and port specification\n``json “ExternalUrlOverride”: “http://xxx.xxx.xxx.xxx:port-nummer”,\n\n#### Storage Path\n\n```json\n    \"StoragePath\": \"./data\",\n    \"DatasetsPath\": \"./datasets\",\n\n\nAdmin\n    \"DefaultAdmin\": {\n      \"Email\": \"your@e.mail\",\n      \"UserName\": \"your-admin-name\",\n      \"Password\": \"your-pw\"\n    },\n\n\nDatabase Passwords\n  \"AllowedHosts\": \"*\",\n  \"ConnectionStrings\": {\n    \"IdentityConnection\": \"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1\",\n    \"RegistryConnection\": \"Server=db;Database=RegistryData;Uid=registry;Pwd=password1\",\n    \"HangfireConnection\": \"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true\"\n  },\nIf you dont want to edit in appsetting.json this can also be created at program start withrun.sh`:\n#!/bin/bash\n\nexport MYSQL_ROOT_PASSWORD=\"password0\"\nexport MYSQL_PASSWORD=\"password01\"\nexport REGISTRY_ADMIN_MAIL=\"your@e.mail\"\nexport REGISTRY_ADMIN_PASSWORD=\"your-pw\"\nexport REGISTRY_SECRET=\"e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z\"\nexport EXTERNAL_URL=\"http://xxx.xxx.xxx.xxx:port-nummer\"\nexport CONTROL_SWITCH='$controlSwitch'\n\nif test -f \".env\"; then\n    echo \"Loading .env file\"\n    # Override default variables from .env file\n    export $(grep -v '^#' .env | xargs)    \nelse\n    echo \".env file does not exist, using default config (NOT FOR PRODUCTION)\"\nfi\n\nrm appsettings.json\nrm initialize.sql\n\nenvsubst &lt; appsettings-template.json &gt; appsettings.json\nenvsubst &lt; initialize-template.sql &gt; initialize.sql\n\nmkdir data\n\nif [[ \"${@#--dry}\" = \"$@\" ]]; then\n    docker-compose up -d    \nelse\n    cat initialize.sql\n    cat appsettings.json\n    docker-compose config   \nfi\nAlternatively and also the suggested variant is to put these settings in a file called .env and then run run.sh. This automatically looks for a .env file and transfers the values.\nMYSQL_ROOT_PASSWORD=\"default-root-password\"\nMYSQL_PASSWORD=\"default-mysql-password\"\nREGISTRY_ADMIN_MAIL=\"test@test.it\"\nREGISTRY_ADMIN_PASSWORD=\"password\"\nREGISTRY_SECRET=\"longandrandomsecrettobegeneratedusingcryptographicallystrongrandomnumbergenerator\"\nEXTERNAL_URL=\"http://xxx.xxx.xxx.xxx:port-nummer\"\nCONTROL_SWITCH='$controlSwitch'\nDepending on the installation, the s must be deleted from the \"credsStore\": \"desktop\" entry in ~/.docker/config.json:\ngeany ~/.docker/config.json\n\n{\n  \"credStore\": \"desktop\"\n}"
+  },
+  {
+    "objectID": "c_b/dronedb.html#api-schnittstelle",
+    "href": "c_b/dronedb.html#api-schnittstelle",
+    "title": "Setup droneDB",
+    "section": "API Schnittstelle",
+    "text": "API Schnittstelle\nMit Hilfe von von swagger können die API-Befehle in einer GUI ausgeführt werden. So können zb. neue Nutzer angelegt werden.\nhttp://xxx.xxx.xxx.xxx:port-nummer/swagger/index.html"
+  },
+  {
+    "objectID": "c_b/planning.html#software",
+    "href": "c_b/planning.html#software",
+    "title": "Planning UAV survey flights",
     "section": "Software",
     "text": "Software"
   },
   {
-    "objectID": "uav/listing1.html#hardware",
-    "href": "uav/listing1.html#hardware",
-    "title": "Software & Materials",
+    "objectID": "c_b/planning.html#hardware",
+    "href": "c_b/planning.html#hardware",
+    "title": "Planning UAV survey flights",
     "section": "Hardware",
     "text": "Hardware"
   },
   {
-    "objectID": "uav/products.html#software",
-    "href": "uav/products.html#software",
-    "title": "Orthomimages and Point Clouds from UAV",
-    "section": "Software",
-    "text": "Software"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the stmBoat knowledge base",
+    "section": "",
+    "text": "Welcome to the stmBoat knowledge base"
   },
   {
-    "objectID": "uav/products.html#hardware",
-    "href": "uav/products.html#hardware",
-    "title": "Orthomimages and Point Clouds from UAV",
-    "section": "Hardware",
-    "text": "Hardware"
+    "objectID": "slides/slidelist.html",
+    "href": "slides/slidelist.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSlides and extensions\n\n\ngisma team\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/slide1.html#header-12",
@@ -168,74 +182,67 @@
     "text": "Basic Reference\nFind more informations at Quarto RevealJS Documentation\n\n\n&lt;gisma 2023&gt;\n\n\n\n\n\n\n \n\n\nThis is the header extension"
   },
   {
-    "objectID": "slides/slidelist.html",
-    "href": "slides/slidelist.html",
-    "title": "Presentations",
+    "objectID": "src/list.html",
+    "href": "src/list.html",
+    "title": "Software",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSlides and extensions\n\n\ngisma team\n\n\n\n\n\n\nNo matching items"
+    "text": "No matching items"
   },
   {
-    "objectID": "uav/planning.html#software",
-    "href": "uav/planning.html#software",
-    "title": "Planning UAV survey flights",
+    "objectID": "c_b/products.html#software",
+    "href": "c_b/products.html#software",
+    "title": "Orthomimages and Point Clouds from UAV",
     "section": "Software",
     "text": "Software"
   },
   {
-    "objectID": "uav/planning.html#hardware",
-    "href": "uav/planning.html#hardware",
-    "title": "Planning UAV survey flights",
+    "objectID": "c_b/products.html#hardware",
+    "href": "c_b/products.html#hardware",
+    "title": "Orthomimages and Point Clouds from UAV",
     "section": "Hardware",
     "text": "Hardware"
   },
   {
-    "objectID": "uav/dronedb.html",
-    "href": "uav/dronedb.html",
-    "title": "Setup droneDB",
+    "objectID": "c_b/listing1.html",
+    "href": "c_b/listing1.html",
+    "title": "Software & Materials",
     "section": "",
-    "text": "The two self hosting variants of droneDB Registry or Server can be made to run without problems for demo purposes. Precondition is a complete installation of docker and/or of docker-compose. However the setup of the directories users and rights is poorly documented. If you want to run the operational production mode on a server you have to make some adjustments."
+    "text": "Micro-Remote-Sensing course materials\nBasic Flight Planning¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nUsing QgroundControl¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nGetting Started Youtube guide for using QGroundControl"
   },
   {
-    "objectID": "uav/dronedb.html#introduction",
-    "href": "uav/dronedb.html#introduction",
-    "title": "Setup droneDB",
+    "objectID": "c_b/listing1.html#things-you-need",
+    "href": "c_b/listing1.html#things-you-need",
+    "title": "Software & Materials",
     "section": "",
-    "text": "The two self hosting variants of droneDB Registry or Server can be made to run without problems for demo purposes. Precondition is a complete installation of docker and/or of docker-compose. However the setup of the directories users and rights is poorly documented. If you want to run the operational production mode on a server you have to make some adjustments."
+    "text": "Micro-Remote-Sensing course materials\nBasic Flight Planning¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nUsing QgroundControl¶ with uavRmp. Tutorials how to plan survey flights with the uavRmp package.\nGetting Started Youtube guide for using QGroundControl"
   },
   {
-    "objectID": "uav/dronedb.html#installation-and-tweaks",
-    "href": "uav/dronedb.html#installation-and-tweaks",
-    "title": "Setup droneDB",
-    "section": "Installation and tweaks",
-    "text": "Installation and tweaks\nIn the documentation there are several variants of selfhosting droneDB The most stable (Kubuntu 22.04 version 05/23) has been the installation from the sources Running from Source or Running in Production. The latter variant is much less complex. For the source variant the following prerequisites are to be installed compellingly:\n\nBefore building registry ensure you have ddblib in your path, if not, download the latest release and add it to PATH.\nFor the webpack you need NodeJS 14+"
+    "objectID": "c_b/listing1.html#software",
+    "href": "c_b/listing1.html#software",
+    "title": "Software & Materials",
+    "section": "Software",
+    "text": "Software"
   },
   {
-    "objectID": "uav/dronedb.html#folder-structure",
-    "href": "uav/dronedb.html#folder-structure",
-    "title": "Setup droneDB",
-    "section": "Folder Structure",
-    "text": "Folder Structure\nThe droneDB server runs in both installations in the production branch of the docker subdirectory and has a default structure that looks like this. The datasets directory is the default for the directory that contains the data that will be served.\ncreu@deep:~/drone-db-generic/Registry/docker/production$ tree -d\n.\n├── data\n│   ├── cache\n│   │   ├── cache\n│   │   └── policy\n│   ├── ClientApp\n│   │   ├── images\n│   │   ├── nexus\n│   │   ├── photosphereviewer\n│   │   └── potree\n│   │       ├── build\n│   │       │   ├── potree\n│   │       │   │   ├── resources\n│   │       │   │   │   ├── icons\n│   │       │   │   │   │   └── matcap\n│   │       │   │   │   ├── images\n│   │       │   │   │   ├── lang\n│   │       │   │   │   │   ├── de\n│   │       │   │   │   │   ├── dev\n│   │       │   │   │   │   ├── en\n│   │       │   │   │   │   ├── en-US\n│   │       │   │   │   │   ├── es\n│   │       │   │   │   │   ├── fr\n│   │       │   │   │   │   ├── jp\n│   │       │   │   │   │   └── se\n│   │       │   │   │   └── textures\n│   │       │   │   │       ├── matcap\n│   │       │   │   │       ├── navigation\n│   │       │   │   │       ├── skybox\n│   │       │   │   │       └── skybox2\n│   │       │   │   └── workers\n│   │       │   └── shaders\n│   │       ├── libs\n│   │       │   ├── d3\n│   │       │   ├── i18next\n│   │       │   ├── jquery\n│   │       │   ├── jquery-ui\n│   │       │   │   └── images\n│   │       │   ├── jstree\n│   │       │   │   └── themes\n│   │       │   │       └── mixed\n│   │       │   ├── openlayers3\n│   │       │   ├── other\n│   │       │   ├── plasio\n│   │       │   │   ├── js\n│   │       │   │   ├── vendor\n│   │       │   │   └── workers\n│   │       │   ├── proj4\n│   │       │   ├── spectrum\n│   │       │   ├── three.js\n│   │       │   │   ├── build\n│   │       │   │   └── extra\n│   │       │   │       └── lines\n│   │       │   └── tween\n│   │       └── scripts\n│   ├── datasets\n│   │   ├── admin\n│   │   ├── mof\n│   │   │   ├── 0075fe94-f9ec-4567-95b9-03720d30f383\n│   │   │   │   └── 2019_processed\n│   │   │   │       ├── ortho_timeseries\n│   │   │   │       └── tiepoints_timeseries\n│   │   │   ├── 3c8dca40-1802-44ab-9aa6-7475439fab7c\n│   │   │   │   └── L1_2021\n│   │   │   │       ├── orthomosaic\n│   │   │   │       │   ├── 03-21\n│   │   │   │       │   ├── 04-27\n│   │   │   │       │   ├── 05-12\n│   │   │   │       │   ├── 05-14\n│   │   │   │       │   ├── 05-28\n│   │   │   │       │   ├── 06-04\n│   │   │   │       │   ├── 06-23\n│   │   │   │       │   ├── 07-07\n│   │   │   │       │   ├── 07-22\n│   │   │   │       │   ├── 10-01\n│   │   │   │       │   └── 10-26\n│   │   │   │       ├── reports\n│   │   │   │       └── sparseclouds\n│   │   │   └── 64289b60-3c30-4845-938e-29a209bcfebc\n│   │   ├── public\n│   │   │   └── 4265a398-6b09-45d1-858c-c06baceb29f4\n│   │   ├── test-a5ac75a1-8a20-428f-81f6-61f3b9b3b921\n│   │   └── uav-courses\n│   │       ├── 51ef9283-3ec7-414c-bc4e-77ab3314a38f\n│   │       ├── d69cea96-2439-425e-8860-69f1226b1a88\n│   │       │   └── home\n│   │       │       └── creu\n│   │       │           └── Desktop\n│   │       │               └── datasets\n│   │       │                   └── gisma-courses\n│   │       │                       └── 2023-05-24\n│   │       └── e1b624a2-0351-4619-a424-98176b6e3311\n│   │           └── L-3089-2452023-all\n│   │               ├── entwine_pointcloud\n│   │               │   ├── ept-data\n│   │               │   ├── ept-hierarchy\n│   │               │   └── ept-sources\n│   │               ├── odm_dem\n│   │               ├── odm_georeferencing\n│   │               ├── odm_orthophoto\n│   │               └── odm_report\n│   └── logs\n└── registry-data\n    ├── cache\n    ├── ClientApp\n    │   ├── images\n    │   ├── nexus\n    │   ├── photosphereviewer\n    │   └── potree\n    │       ├── build\n    │       │   ├── potree\n    │       │   │   ├── resources\n    │       │   │   │   ├── icons\n    │       │   │   │   │   └── matcap\n    │       │   │   │   ├── images\n    │       │   │   │   ├── lang\n    │       │   │   │   │   ├── de\n    │       │   │   │   │   ├── dev\n    │       │   │   │   │   ├── en\n    │       │   │   │   │   ├── en-US\n    │       │   │   │   │   ├── es\n    │       │   │   │   │   ├── fr\n    │       │   │   │   │   ├── jp\n    │       │   │   │   │   └── se\n    │       │   │   │   └── textures\n    │       │   │   │       ├── matcap\n    │       │   │   │       ├── navigation\n    │       │   │   │       ├── skybox\n    │       │   │   │       └── skybox2\n    │       │   │   └── workers\n    │       │   └── shaders\n    │       ├── libs\n    │       │   ├── d3\n    │       │   ├── i18next\n    │       │   ├── jquery\n    │       │   ├── jquery-ui\n    │       │   │   └── images\n    │       │   ├── jstree\n    │       │   │   └── themes\n    │       │   │       └── mixed\n    │       │   ├── openlayers3\n    │       │   ├── other\n    │       │   ├── plasio\n    │       │   │   ├── js\n    │       │   │   ├── vendor\n    │       │   │   └── workers\n    │       │   ├── proj4\n    │       │   ├── spectrum\n    │       │   ├── three.js\n    │       │   │   ├── build\n    │       │   │   └── extra\n    │       │   │       └── lines\n    │       │   └── tween\n    │       └── scripts\n    └── logs"
+    "objectID": "c_b/listing1.html#hardware",
+    "href": "c_b/listing1.html#hardware",
+    "title": "Software & Materials",
+    "section": "Hardware",
+    "text": "Hardware"
   },
   {
-    "objectID": "uav/dronedb.html#personal-settings",
-    "href": "uav/dronedb.html#personal-settings",
-    "title": "Setup droneDB",
-    "section": "Personal Settings",
-    "text": "Personal Settings\nIn order to be able to access the data not only locally, the following settings must be made. The easiest way is to edit the appssettings.json as follows:\n{\n  \"AppSettings\": {\n    \"Secret\": \"e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z\",\n    \"TokenExpirationInDays\": 7,\n    \"RevokedTokens\": [],\n    \"AuthProvider\": \"Mysql\",\n    \"RegistryProvider\": \"Mysql\",\n    \"HangfireProvider\": \"Mysql\",\n    \"DefaultAdmin\": {\n      \"Email\": \"your@e.mail\",\n      \"UserName\": \"your-admin-name\",\n      \"Password\": \"your-pw\"\n    },\n    \"StoragePath\": \"./data\",\n    \"DatasetsPath\": \"./datasets\",\n    \"MaxRequestBodySize\": null,\n    \"BatchTokenLength\": 32,\n    \"UploadBatchTimeout\": \"01:00:00\",\n    \"RandomDatasetNameLength\": 16,\n    \"AuthCookieName\": \"jwtToken\",\n    \"ExternalUrlOverride\": \"http://xxx.xxx.xxx.xxx:port-nummer\",\n    \"ExternalAuthUrl\": null,\n    \"CacheProvider\": null,\n    \"EnableStorageLimiter\": false,\n    \"WorkerThreads\": -1,\n    \"CachePath\": \"./cache\",\n    \"ThumbnailsCacheExpiration\": \"00:30:00\",\n    \"TilesCacheExpiration\": \"00:30:00\",\n    \"ClearCacheInterval\": \"01:00:00\"\n  },\n  \"AllowedHosts\": \"*\",\n  \"ConnectionStrings\": {\n    \"IdentityConnection\": \"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1\",\n    \"RegistryConnection\": \"Server=db;Database=RegistryData;Uid=registry;Pwd=password1\",\n    \"HangfireConnection\": \"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true\"\n  },\n  \"Serilog\": {\n    \"LevelSwitches\": {\n      \"$controlSwitch\": \"Warning\"\n    },\n    \"MinimumLevel\": {\n      \"ControlledBy\": \"$controlSwitch\"\n    },\n    \"Using\": [\n      \"Serilog.Sinks.Console\",\n      \"Serilog.Sinks.File\"\n    ],\n    \"WriteTo\": [\n      {\n        \"Name\": \"Console\"\n      },\n      {\n        \"Name\": \"File\",\n        \"Args\": {\n          \"path\": \"./logs/registry.txt\"\n        }\n      }\n    ],\n    \"Enrich\": [\n      \"FromLogContext\",\n      \"WithMachineName\",\n      \"WithThreadId\"\n    ],\n    \"Destructure\": [\n      {\n        \"Name\": \"ToMaximumDepth\",\n        \"Args\": {\n          \"maximumDestructuringDepth\": 4\n        }\n      },\n      {\n        \"Name\": \"ToMaximumStringLength\",\n        \"Args\": {\n          \"maximumStringLength\": 100\n        }\n      },\n      {\n        \"Name\": \"ToMaximumCollectionCount\",\n        \"Args\": {\n          \"maximumCollectionCount\": 10\n        }\n      }\n    ],\n    \"Properties\": {\n      \"Application\": \"Registry\"\n    }\n  }\n}\nImportant are in particular:\n\nExternal URL\nAttention EXACTLY like this, i.e. with http:// and port specification\n``json “ExternalUrlOverride”: “http://xxx.xxx.xxx.xxx:port-nummer”,\n\n#### Storage Path\n\n```json\n    \"StoragePath\": \"./data\",\n    \"DatasetsPath\": \"./datasets\",\n\n\nAdmin\n    \"DefaultAdmin\": {\n      \"Email\": \"your@e.mail\",\n      \"UserName\": \"your-admin-name\",\n      \"Password\": \"your-pw\"\n    },\n\n\nDatabase Passwords\n  \"AllowedHosts\": \"*\",\n  \"ConnectionStrings\": {\n    \"IdentityConnection\": \"Server=db;Database=RegistryAuth;Uid=registry;Pwd=pasword1\",\n    \"RegistryConnection\": \"Server=db;Database=RegistryData;Uid=registry;Pwd=password1\",\n    \"HangfireConnection\": \"Server=db;Database=RegistryHangfire;Uid=registry;Pwd=password1;Allow User Variables=true\"\n  },\nIf you dont want to edit in appsetting.json this can also be created at program start withrun.sh`:\n#!/bin/bash\n\nexport MYSQL_ROOT_PASSWORD=\"password0\"\nexport MYSQL_PASSWORD=\"password01\"\nexport REGISTRY_ADMIN_MAIL=\"your@e.mail\"\nexport REGISTRY_ADMIN_PASSWORD=\"your-pw\"\nexport REGISTRY_SECRET=\"e7er2yjacmbqjxsmf6h3rtrh7t6wjhef7bkv6kauv3wng3jb3t5hx7jtjry5z2ydd6utbufgq6jar2v3cvexhcescgzacfwvg5kqfa3gx3ppzchdtwcakx5hr3s6485z\"\nexport EXTERNAL_URL=\"http://xxx.xxx.xxx.xxx:port-nummer\"\nexport CONTROL_SWITCH='$controlSwitch'\n\nif test -f \".env\"; then\n    echo \"Loading .env file\"\n    # Override default variables from .env file\n    export $(grep -v '^#' .env | xargs)    \nelse\n    echo \".env file does not exist, using default config (NOT FOR PRODUCTION)\"\nfi\n\nrm appsettings.json\nrm initialize.sql\n\nenvsubst &lt; appsettings-template.json &gt; appsettings.json\nenvsubst &lt; initialize-template.sql &gt; initialize.sql\n\nmkdir data\n\nif [[ \"${@#--dry}\" = \"$@\" ]]; then\n    docker-compose up -d    \nelse\n    cat initialize.sql\n    cat appsettings.json\n    docker-compose config   \nfi\nAlternatively and also the suggested variant is to put these settings in a file called .env and then run run.sh. This automatically looks for a .env file and transfers the values.\nMYSQL_ROOT_PASSWORD=\"default-root-password\"\nMYSQL_PASSWORD=\"default-mysql-password\"\nREGISTRY_ADMIN_MAIL=\"test@test.it\"\nREGISTRY_ADMIN_PASSWORD=\"password\"\nREGISTRY_SECRET=\"longandrandomsecrettobegeneratedusingcryptographicallystrongrandomnumbergenerator\"\nEXTERNAL_URL=\"http://xxx.xxx.xxx.xxx:port-nummer\"\nCONTROL_SWITCH='$controlSwitch'\nDepending on the installation, the s must be deleted from the \"credsStore\": \"desktop\" entry in ~/.docker/config.json:\ngeany ~/.docker/config.json\n\n{\n  \"credStore\": \"desktop\"\n}"
+    "objectID": "c_b/uav-index.html#software",
+    "href": "c_b/uav-index.html#software",
+    "title": "Budget UAVs",
+    "section": "Software",
+    "text": "Software"
   },
   {
-    "objectID": "uav/dronedb.html#api-schnittstelle",
-    "href": "uav/dronedb.html#api-schnittstelle",
-    "title": "Setup droneDB",
-    "section": "API Schnittstelle",
-    "text": "API Schnittstelle\nMit Hilfe von von swagger können die API-Befehle in einer GUI ausgeführt werden. So können zb. neue Nutzer angelegt werden.\nhttp://xxx.xxx.xxx.xxx:port-nummer/swagger/index.html"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to the stmBoat knowledge base",
-    "section": "",
-    "text": "Welcome to the stmBoat knowledge base"
+    "objectID": "c_b/uav-index.html#hardware",
+    "href": "c_b/uav-index.html#hardware",
+    "title": "Budget UAVs",
+    "section": "Hardware",
+    "text": "Hardware"
   },
   {
     "objectID": "base/impressum.html#content-responsibility",
@@ -257,12 +264,5 @@
     "title": "Impressum",
     "section": "Comments & Suggestions",
     "text": "Comments & Suggestions"
-  },
-  {
-    "objectID": "src/list.html",
-    "href": "src/list.html",
-    "title": "Software",
-    "section": "",
-    "text": "No matching items"
   }
 ]
